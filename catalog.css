@@ -452,3 +452,61 @@ ul {
     background-color: #0056b3; /* Фон при наведении */
     color: #f1f1f1; /* Цвет текста при наведении */
   }
+@media (max-width: 600px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product {
+        width: 90%; /* Уменьшаем ширину карточек */
+        margin: 10px 0; /* Убираем боковые отступы */
+    }
+
+    .product img {
+        width: 100%; /* Картинка адаптируется под размер карточки */
+        height: auto;
+    }
+
+    .modal {
+        width: 90vw;
+        padding: 5%;
+    }
+
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .search-and-filter {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #searchInput {
+        width: 100%; /* Сделать поле поиска по ширине экрана */
+    }
+
+    .categories {
+        flex-wrap: wrap; /* Если кнопок много, они будут по несколько в строку */
+        justify-content: center;
+    }
+
+    .categories button {
+        width: 100%; /* Сделать кнопки на всю ширину */
+    }
+
+    .modal-left img {
+        max-height: 60vh;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .modal-left .gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
