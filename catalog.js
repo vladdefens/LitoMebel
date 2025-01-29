@@ -1,15 +1,15 @@
 const products = [  
     { 
         name: "Угол Марсель", 
-        price: "??? руб.", 
+        price: "57 000 руб.", 
         image: "https://i.postimg.cc/JzMFjYmz/image.jpg", 
-        description: "Габариты 255/170 см сп. м. 195/125 см комфортное наполнение механизм дельфин есть короб для белья в комплекте идет столик накладки мдф ткань Канди - Вип Текстиль - 3 категория изготовлен под заказ ",
+        description: "Габариты 255/170 см сп. м. 195/125 см комфортное наполнение механизм дельфин есть короб для белья в комплекте идет столик накладки мдф ткань Канди - Вип Текстиль - 1 категория изготовлен под заказ ",
         gallery: ["https://i.postimg.cc/JzMFjYmz/image.jpg", "https://i.postimg.cc/ZqqDM9Wk/1.jpg", "https://i.postimg.cc/hjzZKH8p/2.jpg"],
         category: "Угол"
     },
     { 
         name: "Угол Шанель П - образный", 
-        price: "??? руб.", 
+        price: "91 500 руб.", 
         image: "https://i.postimg.cc/KY3bt17N/image.jpg", 
         description: "Индивидуальный размер: габариты 420/170 см, сп. м. 350/160 см, три короба для белья, ниши в подлокотниках, выполнен на фанере, очень качественное и комфортное наполнение, накладки МДФ, банкетки раскладываются вперед (200/70 см), что позволяет удобно ложиться перед телевизором. Ткань - Капелла (1 категория). Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/KY3bt17N/image.jpg", "https://i.postimg.cc/cHqShdXN/1.jpg", "https://i.postimg.cc/bJQjF4BS/2.jpg", "https://i.postimg.cc/prRtNkwG/3.jpg"],
@@ -17,7 +17,7 @@ const products = [
     },
     { 
         name: "Диван Колибри", 
-        price: "??? руб.", 
+        price: "34 200 руб.", 
         image: "https://i.postimg.cc/NfvKFccS/image.jpg", 
         description: "Габариты: 225/105 см, сп. м. 195/145 см, большой короб для белья, комфортное наполнение, накладки МДФ, ткань - Адели (1 категория). Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/NfvKFccS/image.jpg"],
@@ -25,7 +25,7 @@ const products = [
     },
     { 
         name: "Диван Чикаго Ч", 
-        price: "??? руб.", 
+        price: "57 000 руб.", 
         image: "https://i.postimg.cc/xdpk1Nf3/image.jpg", 
         description: "Индивидуальный пошив чехла, габариты: 255/90 см, сп. м. 200/160 см, выполнен на фанере, очень комфортное наполнение - Элакс Медиум, ткань - Атмосфера (Союз М), 9 категория. Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/xdpk1Nf3/image.jpg"],
@@ -41,7 +41,7 @@ const products = [
     },
     { 
         name: "Угол Шанель Люкс", 
-        price: "??? руб.", 
+        price: "79 700 руб.", 
         image: "https://i.postimg.cc/6pW3py0n/image.jpg", 
         description: "Габариты: 300/220 см, сп. м. 250/160 см, очень большой и комфортный угол, ниши для хранения вещей, накладки МДФ, два больших короба для белья, выполнен на фанере, большое спальное место, ткань - Браво (2 категория). Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/6pW3py0n/image.jpg", "https://i.postimg.cc/vZ0mgbqj/1.jpg", "https://i.postimg.cc/SsMQv8SF/2.jpg"],
@@ -49,7 +49,7 @@ const products = [
     },
     { 
         name: "Угол Гермес", 
-        price: "??? руб.", 
+        price: "86 000 руб.", 
         image: "https://i.postimg.cc/TYmmDLgs/image.jpg", 
         description: "Габариты: 310/225 см, сп. м. 210/160 см, комфортное наполнение, большое спальное место, короб для белья, ткань - Карди (2 категория). Заказ под клиента.",
         gallery: ["https://i.postimg.cc/TYmmDLgs/image.jpg", "https://i.postimg.cc/W1wk5B96/1.jpg", "https://i.postimg.cc/YS2mZdZc/2.jpg", "https://i.postimg.cc/G2HThHbq/3.jpg"],
@@ -57,7 +57,7 @@ const products = [
     },
     { 
         name: "Диван Шанель", 
-        price: "??? руб.", 
+        price: "46 500 руб.", 
         image: "https://i.postimg.cc/J0YX5ZPw/image.jpg", 
         description: "Габариты: 250/115 см, сп. м. 195/160 см, выполнен на фанере, большой короб для белья, комфортное наполнение, ткань - Мадрид (1 категория), накладки МДФ. Диван изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/J0YX5ZPw/image.jpg", "https://i.postimg.cc/rsHdrcwM/1.jpg", "https://i.postimg.cc/m2c1GcmD/2.jpg"],
@@ -65,7 +65,7 @@ const products = [
     },
     { 
         name: "Диван Виктория М+ люкс", 
-        price: "??? руб.", 
+        price: "37 000 руб.", 
         image: "https://i.postimg.cc/xCHLYXfM/image.jpg", 
         description: "Диван Виктория М+ Люкс: габариты 180/100 см, сп. м. 195/160 см, два бельевых короба, выполнен на фанере, прошивка сиденья и подушек, накладки МДФ на подлокотниках, комфортный размер, ткань - Капелла (1 категория), изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/xCHLYXfM/image.jpg", "https://i.postimg.cc/8z5WcKk1/1.jpg"],
@@ -81,15 +81,15 @@ const products = [
     },
     { 
         name: "Угол Меркурий", 
-        price: "??? руб.", 
+        price: "51 000 руб.", 
         image: "https://i.postimg.cc/1tqBkDPd/image.jpg", 
-        description: "Габариты 260х170 см, сп. м. 210х160 см, комфортное наполнение, два короба для белья, выполнен на фанере, две ниши в подлокотниках, ткань Монолит 2 категория, изготовлен под заказ.",
+        description: "Габариты 260х170 см, сп. м. 210х160 см, комфортное наполнение, два короба для белья, выполнен на фанере, две ниши в подлокотниках, ткань Монолит 1 категория, изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/1tqBkDPd/image.jpg", "https://i.postimg.cc/brfgpdww/1.jpg", "https://i.postimg.cc/VsX449Kr/2.jpg"],
         category: "Угол"
     },
     { 
         name: "Диван Лайм", 
-        price: "??? руб.", 
+        price: "22 500 руб.", 
         image: "https://i.postimg.cc/SxYG2WYx/image.jpg", 
         description: "Габариты 200х90 см, спальное место 200х145 см, большой короб для белья, комфортное наполнение, утяжки и двойная прострочка на сиденье и подушках, ткань Мадрид 1 категория.",
         gallery: ["https://i.postimg.cc/SxYG2WYx/image.jpg", "https://i.postimg.cc/G2dP5V74/1.jpg", "https://i.postimg.cc/zB7wZ760/2.jpg"],
@@ -97,7 +97,7 @@ const products = [
     },
     { 
         name: "Кухонный угол Жардин", 
-        price: "??? руб.", 
+        price: "32 500 руб.", 
         image: "https://i.postimg.cc/g23Zb468/image.jpg", 
         description: "Габариты 170/140 см, выполнен на фанере, два короба для хранения вещей, ткань Сиеста 3 категория, изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/g23Zb468/image.jpg", "https://i.postimg.cc/MTpMRS3m/1.jpg"],
@@ -105,7 +105,7 @@ const products = [
     },
     { 
         name: "Диван Софи К", 
-        price: "??? руб.", 
+        price: "38 900 руб.", 
         image: "https://i.postimg.cc/4yrmrhfW/image.jpg", 
         description: "Габариты: 245x100 см, сп. место: 200x150 см, ткань — Рио (категория 2, под заказ), комфортное наполнение, большой короб для белья, заказ выполнен под клиента.",
         gallery: ["https://i.postimg.cc/4yrmrhfW/image.jpg", "https://i.postimg.cc/pr2HyW0P/1.jpg", "https://i.postimg.cc/ZYcm2NRn/2.jpg", "https://i.postimg.cc/xT1Q2dJR/3.jpg"],
@@ -113,7 +113,7 @@ const products = [
     },
     { 
         name: "Диван Сторис С", 
-        price: "??? руб.", 
+        price: "47 000 руб.", 
         image: "https://i.postimg.cc/52HMXkmQ/image.jpg", 
         description: "Габариты: 210x90 см, сп. м. 200x150 см, большой бельевой короб, комфортное наполнение, выполнен на фанере, ткань — Велютто (2 категория), изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/52HMXkmQ/image.jpg"],
@@ -129,7 +129,7 @@ const products = [
     },
     { 
         name: "Диван Шанель мини", 
-        price: "??? руб.", 
+        price: "36 000 руб.", 
         image: "https://i.postimg.cc/tghwP0nJ/image.jpg", 
         description: "Габариты: 200x115 см, сп. м. 200x160 см, выполнен на фанере, большой короб для хранения белья, очень комфортное наполнение, подходит для ежедневного сна, ткань — Мадрид (1 категория), изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/tghwP0nJ/image.jpg"],
@@ -137,7 +137,7 @@ const products = [
     },
     { 
         name: "Диван Чикаго С", 
-        price: "??? руб.", 
+        price: "54 000 руб.", 
         image: "https://i.postimg.cc/KvwHHcn4/image.jpg", 
         description: "Габариты: 255x90 см, сп. м. 200x160 см, выполнен на фанере, очень комфортное наполнение — элакс, ткань Атмосфера (Союз М) — 9 категория, изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/KvwHHcn4/image.jpg", "https://i.postimg.cc/YSwytXDH/1.jpg", "https://i.postimg.cc/MGb3Hygj/2.jpg"],
@@ -161,7 +161,7 @@ const products = [
     },
     { 
         name: "Угол Зафира", 
-        price: "??? руб.", 
+        price: "44 300 руб.", 
         image: "https://i.postimg.cc/NLhGrvhH/image.jpg", 
         description: "Габариты: 245/150 см, сп. место: 210/150 см. Два бельевых короба, комфортное наполнение. Ткань - Карди 2 категория. Изготовлен под заказчика.",
         gallery: ["https://i.postimg.cc/NLhGrvhH/image.jpg", "https://i.postimg.cc/NGZRxyB1/1.jpg"],
@@ -169,7 +169,7 @@ const products = [
     },
     { 
         name: "Диван Валенсия Люкс", 
-        price: "??? руб.", 
+        price: "37 700 руб.", 
         image: "https://i.postimg.cc/8CY2CBgF/image.jpg", 
         description: "Габариты 225/105, сп. место 195/145. Ткань - Монако, категория - 3. Можно подобрать идентичные цвета в Нуволе. Индивидуальный заказ - мягкие подлокотники, без МДФ накладок.",
         gallery: ["https://i.postimg.cc/8CY2CBgF/image.jpg", "https://i.postimg.cc/FRJ2kdhT/1.jpg", "https://i.postimg.cc/C5T9Gh1S/2.jpg"],
@@ -177,7 +177,7 @@ const products = [
     },
     { 
         name: "Диван Орион К", 
-        price: "??? руб.", 
+        price: "60 960 руб.", 
         image: "https://i.postimg.cc/HkV3LGY2/image.jpg", 
         description: "Габариты 200/115 см, сп. место 200/135 см. Механизм - пума, выполнен на фанере. Ткань: замша Плутон (2 категория). Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/HkV3LGY2/image.jpg", "https://i.postimg.cc/43c5zzhH/1.jpg", "https://i.postimg.cc/W1C8F9tP/2.jpg"],
@@ -185,7 +185,7 @@ const products = [
     },
     { 
         name: "Диван Шанель Ш", 
-        price: "??? руб.", 
+        price: "47 300 руб.", 
         image: "https://i.postimg.cc/GpjBw2WS/image.jpg", 
         description: "Габариты: 250/115 см, сп. место: 195/160 см. Выполнен на фанере, большой короб для белья, комфортное наполнение. Ткань - Плутон (Эгида, аналог) - 2 категория. Диван изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/GpjBw2WS/image.jpg", "https://i.postimg.cc/FRW7z6sy/1.jpg", "https://i.postimg.cc/C5Rdq4zW/2.jpg"],
@@ -209,7 +209,7 @@ const products = [
     },
     { 
         name: "Угол Гранд", 
-        price: "??? руб.", 
+        price: "44 000 руб.", 
         image: "https://i.postimg.cc/RCWcf15S/image.jpg", 
         description: "Габариты 210/155 см, сп. место 205/145 см. Оттоманка на газ лифтах, большой короб для белья, механизм раскладки дельфин. Выполнен на фанере, комфортное наполнение. Ткань Мадрид - 1 категория. Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/RCWcf15S/image.jpg"],
@@ -225,7 +225,7 @@ const products = [
     },
     { 
         name: "Диван Софи", 
-        price: "??? руб.", 
+        price: "39 900 руб.", 
         image: "https://i.postimg.cc/8PnB9yRr/image.jpg", 
         description: "Габариты: 245/100 см, сп. место: 200/150 см. Комфортное наполнение, полка с ЛДСП, большой короб для белья. Ткань Мадрид - 1 категория.",
         gallery: ["https://i.postimg.cc/8PnB9yRr/image.jpg", "https://i.postimg.cc/kg0NXBhJ/1.jpg", "https://i.postimg.cc/rp51dMvS/2.jpg"],
@@ -241,7 +241,7 @@ const products = [
     },
     { 
         name: "Диван Рич Б", 
-        price: "??? руб.", 
+        price: "38 800 руб.", 
         image: "https://i.postimg.cc/FzTg9pw8/image.jpg", 
         description: "Габариты: 215/90 см, сп. место: 200/150 см. Большой бельевой короб, комфортное наполнение. Ткань Тедди (Эгида) - 8 категория. Диван выполнен под заказ.",
         gallery: ["https://i.postimg.cc/FzTg9pw8/image.jpg"],
@@ -265,7 +265,7 @@ const products = [
     },
     { 
         name: "Диван малютка Милана - МДФ накладки", 
-        price: "??? руб.", 
+        price: "35 700 руб.", 
         image: "https://i.postimg.cc/JnJ24fQg/image.jpg", 
         description: "Габариты: 150х115 см, сп. место: 190х118 см. Ткань: Ибица, категория 3 (под заказ). Короб для белья, комфортное спальное место, заказ под клиента.",
         gallery: ["https://i.postimg.cc/JnJ24fQg/image.jpg", "https://i.postimg.cc/wMpbtwfB/1.jpg", "https://i.postimg.cc/PJQV119Q/2.jpg"],
@@ -289,7 +289,7 @@ const products = [
     },
     { 
         name: "Угол Универсал на подъемном механизме", 
-        price: "??? руб.", 
+        price: "47 200 руб.", 
         image: "https://i.postimg.cc/cJ6Jjmc6/image.jpg", 
         description: "Габариты: 230х155 см, спальное место: 195х155 см. Комфортное наполнение, удобное спальное место, два больших короба для белья. Угол взаимозаменяемый. Ткань: Титан Грэй под заказ, ткань 4 категория. Заказ под клиента.",
         gallery: ["https://i.postimg.cc/cJ6Jjmc6/image.jpg", "https://i.postimg.cc/xd7dSzs5/1.jpg", "https://i.postimg.cc/Xq67r06y/2.jpg"],
@@ -297,7 +297,7 @@ const products = [
     },
     { 
         name: "Диван Честер С", 
-        price: "??? руб.", 
+        price: "32 700 руб.", 
         image: "https://i.postimg.cc/tRBhnrmm/image.jpg", 
         description: "Габариты: 205х90 см, спальное место: 200х145 см. Комфортное наполнение, удобное спальное место, большой короб для белья. Ткань: Бёрн, ткань 2 категория.",
         gallery: ["https://i.postimg.cc/tRBhnrmm/image.jpg", "https://i.postimg.cc/KvVBJ1bP/1.jpg", "https://i.postimg.cc/VL5Xqjxs/2.jpg", "https://i.postimg.cc/zGgWMqD9/3.jpg"],
@@ -305,7 +305,7 @@ const products = [
     },
     { 
         name: "Угол Шанель К", 
-        price: "??? руб.", 
+        price: "57 200 руб.", 
         image: "https://i.postimg.cc/02xyxxCT/image.jpg", 
         description: "Габариты 2.60*1.70, спальное место 2.05*1.60. Комфортное наполнение, удобное спальное место. Выполнен на фанере, 2 короба для белья, 2 ниши в подлокотниках. Ткань Корако 2 категория.",
         gallery: ["https://i.postimg.cc/02xyxxCT/image.jpg", "https://i.postimg.cc/CLNLxtPz/1.jpg", "https://i.postimg.cc/0yXkpSqv/2.jpg"],
@@ -337,7 +337,7 @@ const products = [
     },
     { 
         name: "Угол Орион П-образный С", 
-        price: "??? руб.", 
+        price: "125 500 руб.", 
         image: "https://i.postimg.cc/VNVWSxSb/image.jpg", 
         description: "Шикарное и комфортное спальное место + короб для белья. Габариты: 404 * 180, сп. место: 370 * 140. Ткань: Монако (матрас), плюш (каркас), 3-я категория. Ткань доступна к заказу! Также есть возможность выбора похожих оттенков ткани Нувола (1-я категория).",
         gallery: ["https://i.postimg.cc/VNVWSxSb/image.jpg", "https://i.postimg.cc/85fBLZWX/1.jpg", "https://i.postimg.cc/mkx3j7yL/2.jpg"],
@@ -345,7 +345,7 @@ const products = [
     },
     { 
         name: "Диван Интайм New", 
-        price: "??? руб.", 
+        price: "39 200 руб.", 
         image: "https://i.postimg.cc/dDPWhzx9/New.jpg", 
         description: "Ткань основная Рио - 2-я категория, ткань дополнение - Монако 3-я категория, каркас - фанера, короб для белья, ниши (подлокотники), комфортное наполнение. Габариты: 1.85*1.10, сп. место: 1.60*1.45, глубина посадки (без учёта подушек) - 85 см. Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/dDPWhzx9/New.jpg", "https://i.postimg.cc/kM6qtKHV/New1.jpg", "https://i.postimg.cc/zXTNx588/New2.jpg"],
@@ -361,7 +361,7 @@ const products = [
     },
     { 
         name: "Диван Чикаго", 
-        price: "??? руб.", 
+        price: "54 000 руб.", 
         image: "https://i.postimg.cc/FR1mpLsB/image.jpg", 
         description: "Габариты: 255/90 см, сп. м. 200/160 см, выполнен на фанере, очень комфортное наполнение, ткань - Гоа (Арбен), 3 категория. Изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/FR1mpLsB/image.jpg"],
@@ -385,7 +385,7 @@ const products = [
     },
     { 
         name: "Угол модульный Орион", 
-        price: "??? руб.", 
+        price: "87 000 руб.", 
         image: "https://i.postimg.cc/tJPB0WdT/image.jpg", 
         description: "Габариты: 300/180 см, сп. м. 300/135 см, угол модульный, взаимозаменяемый (на фото диванная часть цельная, возможно заказать раздельную), механизм - пума, ящик для белья, каркас - фанера, ткань - Монро (ВИП текстиль), 8 категория. Выполнен под заказчика.",
         gallery: ["https://i.postimg.cc/tJPB0WdT/image.jpg"],
@@ -393,7 +393,7 @@ const products = [
     },
     { 
         name: "Кресло Монро", 
-        price: "??? руб.", 
+        price: "28 300 руб.", 
         image: "https://i.postimg.cc/7PTsTrvk/image.jpg", 
         description: "Ткань: Адели шоколад (1 категория), очень мягкое и удобное кресло, комфортное наполнение. Габариты: 120/100 см, глубина посадки 58 см, ширина посадки 50 см. Заказ выполнен под клиента.",
         gallery: ["https://i.postimg.cc/7PTsTrvk/image.jpg", "https://i.postimg.cc/NfqN6CYr/1.jpg", "https://i.postimg.cc/wTXw05T4/2.jpg"],
@@ -401,7 +401,7 @@ const products = [
     },
     { 
         name: "Диван Валенсия Люкс М+", 
-        price: "??? руб.", 
+        price: "40 500 руб.", 
         image: "https://i.postimg.cc/6pBYS78W/image.jpg", 
         description: "Ткань: Тенериф (3 категория), индивидуальный заказ - МДФ накладки (дуб крафт белый), комфортное наполнение, короб для белья, ниши в подлокотниках, заказ выполнен под клиента.",
         gallery: ["https://i.postimg.cc/6pBYS78W/image.jpg", "https://i.postimg.cc/6Q3zWDVF/1.jpg"],
@@ -441,7 +441,7 @@ const products = [
     },
     { 
         name: "Диван Софи 2", 
-        price: "??? руб.", 
+        price: "39 900 руб.", 
         image: "https://i.postimg.cc/RZ3Nvd6X/2.jpg", 
         description: "Комфортное наполнение; короб для белья; ниши в подлокотниках; ткань Карди, 2 категория; заказ под клиента.",
         gallery: ["https://i.postimg.cc/RZ3Nvd6X/2.jpg", "https://i.postimg.cc/XYTXq593/22.jpg", "https://i.postimg.cc/qRG71ZSM/23.jpg"],
@@ -465,7 +465,7 @@ const products = [
     },
     { 
         name: "Диван Классик", 
-        price: "??? руб.", 
+        price: "55 000 руб.", 
         image: "https://i.postimg.cc/Bv49mQ0H/image.jpg", 
         description: "габариты: 235 / 120 см сп. м. 195 / 160 см большой короб для белья выполнен на фанере комфортное наполнение ткань Даллас  - 2 категория выполнен под заказ .",
         gallery: ["https://i.postimg.cc/Bv49mQ0H/image.jpg", "https://i.postimg.cc/TP08FMdS/1.jpg", "https://i.postimg.cc/tgQPfwSh/2.jpg"],
@@ -473,7 +473,7 @@ const products = [
     },
     { 
         name: "Кресло Шанель", 
-        price: "??? руб.", 
+        price: "25 000 руб.", 
         image: "https://i.postimg.cc/9fC0yhgN/image.jpg", 
         description: "габариты 100/105 см Комфортное наполнение , короб для хранения вещей выполнен на фанере наладки мдф ткань Мадрид - 1 категория изготовлен под заказ ",
         gallery: ["https://i.postimg.cc/9fC0yhgN/image.jpg", "https://i.postimg.cc/hjGG30BL/1.jpg", "https://i.postimg.cc/GtWhtwsK/2.jpg"],
@@ -489,7 +489,7 @@ const products = [
     },
     {
         name: "Диван Зафира",
-        price: "??? руб.",
+        price: "34 500 руб.",
         image: "https://i.postimg.cc/5N8FznNy/image.jpg",
         description: "Габариты: 225 / 105 см; сп. м.: 195 / 150 см; большой короб для белья; комфортное наполнение; ткань Монолит, 2 категория.",
         gallery: ["https://i.postimg.cc/5N8FznNy/image.jpg"],
@@ -497,7 +497,7 @@ const products = [
     },
     { 
         name: "Диван Меркурий М+", 
-        price: "??? руб.", 
+        price: "45 700 руб.", 
         image: "https://i.postimg.cc/2SwbcyWf/image.jpg", 
         description: "Комфортное наполнение. Индивидуальный заказ - полностью фанерный короб! Ткань Лама 81 2ая категория",
         gallery: ["https://i.postimg.cc/2SwbcyWf/image.jpg", "https://i.postimg.cc/xCWcJbwL/1.jpg", "https://i.postimg.cc/pVF9NqjC/2.jpg", 
