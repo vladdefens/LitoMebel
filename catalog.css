@@ -478,6 +478,19 @@ ul {
         height: auto;
     }
 
+    .product button {
+        font-size: 18px; /* Увеличиваем размер текста на кнопке */
+        padding: 12px 24px; /* Увеличиваем внутренние отступы */
+    }
+
+    .product h3 {
+        font-size: 22px; /* Увеличиваем размер текста для названия */
+    }
+
+    .product p {
+        font-size: 18px; /* Увеличиваем размер текста для цены */
+    }
+
     .modal {
         width: 90vw;
         padding: 5%;
@@ -503,6 +516,7 @@ ul {
 
     .categories button {
         width: 100%;
+        text-transform: capitalize; /* Делаем первую букву заглавной на всех устройствах */
     }
 
     .modal-left img {
