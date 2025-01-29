@@ -452,7 +452,7 @@ ul {
     background-color: #0056b3; /* Фон при наведении */
     color: #f1f1f1; /* Цвет текста при наведении */
   }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .products {
         flex-direction: column;
         align-items: center;
@@ -460,7 +460,7 @@ ul {
     }
 
     .product {
-        width: 200%; /* Увеличиваем ширину карточек в два раза */
+        width: 100%; /* Увеличиваем ширину карточек в два раза */
         max-width: 1200px; /* Ограничиваем максимальную ширину карточки */
         margin: 10px 0; /* Убираем боковые отступы */
         padding: 15px; /* Увеличиваем внутренние отступы */
