@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="catalog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мебельный магазин</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Добро пожаловать в наш мебельный магазин</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="about.html" class="active">О Нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="search-and-filter">
+            <input id="searchInput" type="text" placeholder="Поиск товаров..." oninput="searchProducts()">
+            <div class="categories">
+                <button id="Все" onclick="filterCategory('')">Все</button>
+                <button id="Диван" onclick="filterCategory('Диван')">Диваны</button>
+                <button id="Угол" onclick="filterCategory('Угол')">Углы</button>
+                <button id="Кресло" onclick="filterCategory('Кресло')">Кресла</button>
+                <button id="Кухонный угол" onclick="filterCategory('Кухонный угол')">Кухонные углы</button>
+                <button id="Комплект" onclick="filterCategory('Комплект')"> Комплекты</button>
+            </div>
+        </div>
+        <div class="products" id="product-container"></div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 ИП Литовкина М.В. ИНН:930200132583 +79493420947 - Марина</p>
+    </footer>
+    <script src="catalog.js" defer></script>
+</body>
+</html>

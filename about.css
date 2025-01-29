@@ -1,0 +1,139 @@
+/* Начальный код для #.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+}
+
+.header .title {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    background-color: white;
+    color: #007BFF;
+    border-radius: 5px;
+}
+
+
+
+.about h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #007BFF;
+}
+
+.about p {
+    text-align: justify; /* Выравнивание по ширине */
+    margin: 10px 20px; /* Немного увеличил отступы для рамки */
+    font-size: 1rem;
+    border: 2px solid lightblue; /* Голубая рамка */
+    border-radius: 8px; /* Закругленные углы рамки */
+    padding: 10px; /* Отступы внутри рамки */
+    background-color: #f0f8ff; /* Нежный голубой фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+.main {
+    padding: 40px 0;
+    padding-bottom: 50px; /* Это обеспечит пространство для футера */
+}
+.about p, .location-section {
+    border: 2px solid lightblue; /* Голубая рамка */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 20px; /* Отступы внутри секции */
+    background-color: #f0f8ff; /* Нежный голубой фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    margin-bottom: 20px; /* Отступ между секциями */
+}
+
+.location-section h2, .about h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.location-content {
+    display: flex;
+    flex-wrap: wrap; /* Для адаптивности */
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.location-text {
+    flex: 1 1 50%; /* Текст занимает 50% ширины */
+    padding: 10px;
+}
+
+.location-photo {
+    flex: 1 1 40%; /* Фото занимает 40% ширины */
+    padding: 10px;
+}
+
+.location-photo img {
+    width: 100px;
+    height:100px;
+    border-radius: 8px; /* Закругление фото */
+}
+
+.location-map {
+    margin-top: 15px;
+    border: 2px solid lightblue;
+    border-radius: 8px;
+    overflow: hidden; /* Чтобы карта не выходила за границы */
+}

@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto; /* Прокрутка по горизонтали */
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    min-width: 200px; /* Фиксированная ширина для карточек */
+    flex-shrink: 0;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем модальное окно */
+    background: #fff;
+    padding: 2% 5%;
+    z-index: 1000;
+    max-width: 90%;  /* Максимальная ширина модального окна */
+    width: 80vw; /* Ширина модального окна 80% от ширины экрана */
+    height: auto;
+    max-height: 80vh;  /* Максимальная высота 80% от высоты экрана */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.modal-left {
+    flex: 1;
+    max-width: 50%; /* Увеличиваем ширину для изображений */
+}
+
+.modal-left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-right h2 {
+    margin-top: 0;
+}
+
+.modal-right p {
+    margin: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-left .gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.modal-left .gallery img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.modal-left .gallery img:hover {
+    transform: scale(1.1);
+    border-color: #000;
+}
+
+#main-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* Увеличиваем высоту */
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-modal-content img {
+    width: 100%;  /* Используем 100% ширины доступной области */
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.close-image-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.close-image-modal:hover {
+    color: red;
+}
+
+.gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+    #main-image {
+        max-width: 100%;
+        max-height: 70vh;
+    }
+
+    .gallery img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .modal {
+        width: 90vw;
+        padding: 5%;
+    }
+
+    .modal-left img {
+        max-height: 60vh;
+    }
+
+    .modal-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+.product button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: #0056b3;
+}
+ul {
+    padding: 0; /* Убираем отступы у списка */
+    margin: 0; /* Убираем внешние отступы */
+    display: flex; /* Располагаем элементы в строку */
+    gap: 10px; /* Расстояние между кнопками */
+    list-style: none; /* Убираем маркеры списка */
+  }
+  
+  li a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: white; /* Цвет текста */
+    background-color: #007BFF; /* Цвет фона кнопки */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    font-family: Arial, sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер текста */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Анимация при наведении */
+  }
+  
+  li a:hover {
+    background-color: #0056b3; /* Фон при наведении */
+    color: #f1f1f1; /* Цвет текста при наведении */
+  }
+  img {
+    display: block; /* Убирает нижний отступ, который появляется у img как у inline элемента */
+    width: 100%; /* Растягивает изображение на всю ширину экрана */
+    height: auto; /* Сохраняет пропорции изображения */
+  }
