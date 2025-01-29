@@ -31,14 +31,6 @@ const products = [
         gallery: ["https://i.postimg.cc/ncmh5z6P/image.jpg", "https://i.postimg.cc/B6tqCQTN/1.jpg", "https://i.postimg.cc/7h2wpsQ2/2.jpg", "https://i.postimg.cc/dQkCsJb8/3.jpg"],
         category: "Угол"
     },
-    {
-        name: "Диван Зафира",
-        price: "??? руб.",
-        image: "https://i.postimg.cc/5N8FznNy/image.jpg",
-        description: "Габариты: 225 / 105 см; сп. м.: 195 / 150 см; большой короб для белья; комфортное наполнение; ткань Монолит, 2 категория.",
-        gallery: ["https://i.postimg.cc/5N8FznNy/image.jpg"],
-        category: "Диван"
-    },
     { 
         name: "Диван Меркурий М+", 
         price: "??? руб.", 
