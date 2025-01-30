@@ -539,7 +539,7 @@ function showDetails(index) {
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <p><strong>Цена:</strong> ${product.price}</p>
-                <p><strong>Телефон для связи:</strong> +79493420947</p>
+                <p><strong>Телефон для связи:</strong> +79493420947 НА САЙТЕ ВСЕ ТОВАРЫ СО СКИДКОЙ 5% ПРИ ЗАКАЗЕ ЧЕРЕЗ НОМЕР ТЕЛЕФОНА НУЖНО СООБЩИТЬ ЧТО ВЫ ЗВОНИТЕ С САЙТА ЧТОБЫ ПОЛУЧИТЬ СКИДКУ</p>
                 <p>Или заполните форму:</p>
                 <form id="orderForm">
                     <label for="name">Ваше имя:</label>
