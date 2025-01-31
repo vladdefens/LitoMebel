@@ -491,8 +491,11 @@ const products = [
 ];
 
 let displayedProducts = [...products]; // Копируем исходный массив товаров
+let selectedCategory = "";
 
 const productContainer = document.getElementById('product-container');
+const minPriceInput = document.getElementById('min-price');
+const maxPriceInput = document.getElementById('max-price');
 const modal = document.createElement('div');
 const overlay = document.createElement('div');
 
@@ -503,14 +506,12 @@ document.body.appendChild(modal);
 document.body.appendChild(overlay);
 
 // Функция для отображения карточек товаров
-function renderProducts(productsToRender = displayedProducts) {
-    displayedProducts = productsToRender; // Сохраняем текущий список
-    productContainer.innerHTML = productsToRender.map((product, index) =>
+function renderProducts(productsToRender) {
+    productContainer.innerHTML = productsToRender.map(product => 
         `<div class="product">
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>Цена: ${product.price}</p>
-            <button onclick="showDetails(${index})">Подробнее</button>
+            <p>Цена: ${product.price} руб.</p>
         </div>`
     ).join('');
 }
@@ -686,13 +687,15 @@ function updateCategoryButtons() {
 }
 
 // Обработчики кликов по кнопкам
-document.querySelectorAll('.categories button').forEach(button => {
-    button.addEventListener('click', () => {
-        const category = button.textContent.replace(/\(\d+\)/, '').trim();
-        filterCategory(category === 'Все' ? '' : category); // Фильтруем по категории
-        updateCategoryButtons(); // Обновляем счетчики
+document.querySelectorAll('.category-button').forEach(button => {
+    button.addEventListener('click', function() {
+        selectedCategory = this.id === 'Все' ? "" : this.id;
+        applyFilters();
     });
 });
+
+minPriceInput.addEventListener('input', applyFilters);
+maxPriceInput.addEventListener('input', applyFilters);
 
 // Инициализация при загрузке страницы
 window.onload = () => {
@@ -710,13 +713,8 @@ function searchProducts() {
 }
 // Получаем минимальную и максимальную цену из списка товаров
 function getMinMaxPrice() {
-    const prices = products
-        .map(p => parseInt(p.price.replace(/\D/g, "")))
-        .filter(price => !isNaN(price));
-    return {
-        min: Math.min(...prices),
-        max: Math.max(...prices)
-    };
+    const prices = products.map(p => p.price);
+    return { min: Math.min(...prices), max: Math.max(...prices) };
 }
 
 // Добавляем фильтр по цене в HTML
@@ -751,3 +749,19 @@ function sortByPrice(ascending) {
     });
     renderProducts(sortedProducts);
 }
+function applyFilters() {
+    const minPrice = parseInt(minPriceInput.value) || getMinMaxPrice().min;
+    const maxPrice = parseInt(maxPriceInput.value) || getMinMaxPrice().max;
+
+    const filteredProducts = products.filter(product => 
+        (selectedCategory === "" || product.category === selectedCategory) &&
+        product.price >= minPrice && product.price <= maxPrice
+    );
+    renderProducts(filteredProducts);
+}
+const { min, max } = getMinMaxPrice();
+minPriceInput.value = min;
+maxPriceInput.value = max;
+
+renderProducts(products);
+
