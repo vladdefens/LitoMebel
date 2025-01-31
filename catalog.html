@@ -29,15 +29,6 @@
                 <button id="Кухонный угол" onclick="filterCategory('Кухонный угол')">Кухонные углы</button>
                 <button id="Комплект" onclick="filterCategory('Комплект')"> Комплекты</button>
             </div>
-            <div class="price-filter">
-                <label>Цена: </label>
-                <input type="number" id="minPrice" placeholder="от" oninput="filterByPrice()">
-                <input type="number" id="maxPrice" placeholder="до" oninput="filterByPrice()">
-            </div>
-            <div class="sort-buttons">
-                <button onclick="sortPriceAscending()">Цена ↑</button>
-                <button onclick="sortPriceDescending()">Цена ↓</button>
-            </div>
         </div>
         <div class="products" id="product-container"></div>
         
