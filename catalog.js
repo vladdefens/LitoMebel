@@ -752,26 +752,3 @@ function sortByPrice(ascending) {
     });
     renderProducts(sortedProducts);
 }
-
-// Пример для кнопок категорий:
-document.getElementById('Все').addEventListener('click', () => {
-    filterCategory('');
-});
-document.getElementById('Диван').addEventListener('click', () => {
-    filterCategory('Диван');
-});
-document.getElementById('Угол').addEventListener('click', () => {
-    filterCategory('Угол');
-});
-document.getElementById('Кресло').addEventListener('click', () => {
-    filterCategory('Кресло');
-});
-document.getElementById('Кухонный угол').addEventListener('click', () => {
-    filterCategory('Кухонный угол');
-});
-document.getElementById('Комплект').addEventListener('click', () => {
-    filterCategory('Комплект');
-});
-
-// Пример для поиска:
-document.getElementById('searchInput').addEventListener('input', searchProducts);
