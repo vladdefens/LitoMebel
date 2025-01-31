@@ -491,6 +491,7 @@ const products = [
 ];
 
 let displayedProducts = [...products]; // Копируем исходный массив товаров
+let currentCategory = '';
 
 const productContainer = document.getElementById('product-container');
 const modal = document.createElement('div');
@@ -504,7 +505,7 @@ document.body.appendChild(overlay);
 
 // Функция для отображения карточек товаров
 function renderProducts(productsToRender = displayedProducts) {
-    displayedProducts = productsToRender; // Сохраняем текущий список
+    displayedProducts = productsToRender;
     productContainer.innerHTML = productsToRender.map((product, index) =>
         `<div class="product">
             <img src="${product.image}" alt="${product.name}">
@@ -513,6 +514,40 @@ function renderProducts(productsToRender = displayedProducts) {
             <button onclick="showDetails(${index})">Подробнее</button>
         </div>`
     ).join('');
+}
+
+// Обновленный обработчик кликов по категориям
+function setupCategoryButtons() {
+    document.querySelectorAll('.categories button').forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.textContent.replace(/\(\d+\)/, '').trim();
+            filterProducts(category === 'Все' ? '' : category);
+        });
+    });
+}
+
+// Обработчик изменения цен
+function setupPriceFilters() {
+    document.getElementById('minPrice').addEventListener('change', () => filterProducts(currentCategory));
+    document.getElementById('maxPrice').addEventListener('change', () => filterProducts(currentCategory));
+}
+
+
+
+// Функция для фильтрации товаров по категории и цене
+function filterProducts(category) {
+    currentCategory = category;
+    const minPrice = parseInt(document.getElementById('minPrice').value) || min;
+    const maxPrice = parseInt(document.getElementById('maxPrice').value) || max;
+    
+    const filteredProducts = products.filter(product => {
+        const price = parseInt(product.price.replace(/\D/g, ""));
+        const matchesCategory = category === '' || product.category.toLowerCase() === category.toLowerCase();
+        const matchesPrice = price >= minPrice && price <= maxPrice;
+        return matchesCategory && matchesPrice;
+    });
+    
+    renderProducts(filteredProducts);
 }
 
 // Функция для отображения модального окна
@@ -659,18 +694,10 @@ function sendOrder(index) {
     }
 }
 
-// Фильтрация по категории
-function filterCategory(category) {
-    const filteredProducts = products.filter(product =>
-        (product.category.toLowerCase() === category.toLowerCase()) || category === ''
-    );
-    renderProducts(filteredProducts);
-}
-
 // Функция для подсчета товаров в каждой категории
 function getProductCount(category) {
     if (category === '') {
-        return products.length; // Все товары
+        return products.length;
     }
     return products.filter(product => product.category.toLowerCase() === category.toLowerCase()).length;
 }
@@ -679,11 +706,12 @@ function getProductCount(category) {
 function updateCategoryButtons() {
     const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект'];
     categories.forEach(category => {
-        const button = document.getElementById(category); 
-        const count = getProductCount(category === 'Все' ? '' : category); // Получаем количество товаров в категории
-        button.textContent = `${category} (${count})`; // Обновляем текст кнопки
+        const button = document.getElementById(category);
+        const count = getProductCount(category === 'Все' ? '' : category);
+        button.textContent = `${category} (${count})`;
     });
 }
+
 
 // Обработчики кликов по кнопкам
 document.querySelectorAll('.categories button').forEach(button => {
@@ -694,10 +722,12 @@ document.querySelectorAll('.categories button').forEach(button => {
     });
 });
 
-// Инициализация при загрузке страницы
+// Инициализация фильтров при загрузке страницы
 window.onload = () => {
-    updateCategoryButtons(); // Обновляем текст кнопок с количеством товаров
-    renderProducts(products); // Отображаем все товары по умолчанию
+    setupCategoryButtons();
+    setupPriceFilters();
+    updateCategoryButtons();
+    renderProducts(products);
 };
 
 // Поиск товаров
