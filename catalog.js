@@ -504,12 +504,14 @@ document.body.appendChild(modal);
 document.body.appendChild(overlay);
 
 // Функция для отображения карточек товаров
-function renderProducts(productsToRender) {
-    productContainer.innerHTML = productsToRender.map(product => 
+function renderProducts(productsToRender = displayedProducts) {
+    displayedProducts = productsToRender; // Сохраняем текущий список
+    productContainer.innerHTML = productsToRender.map((product, index) =>
         `<div class="product">
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>Цена: ${product.price} руб.</p>
+            <p>Цена: ${product.price}</p>
+            <button onclick="showDetails(${index})">Подробнее</button>
         </div>`
     ).join('');
 }
@@ -685,10 +687,11 @@ function updateCategoryButtons() {
 }
 
 // Обработчики кликов по кнопкам
-document.querySelectorAll('.category-button').forEach(button => {
-    button.addEventListener('click', function() {
-        selectedCategory = this.id === 'Все' ? "" : this.id;
-        applyFilters();
+document.querySelectorAll('.categories button').forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.textContent.replace(/\(\d+\)/, '').trim();
+        filterCategory(category === 'Все' ? '' : category); // Фильтруем по категории
+        updateCategoryButtons(); // Обновляем счетчики
     });
 });
 
