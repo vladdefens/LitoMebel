@@ -708,3 +708,60 @@ function searchProducts() {
     );
     renderProducts(filteredProducts);
 }
+// Добавляем фильтр по цене и сортировку
+const filterContainer = document.createElement('div');
+filterContainer.className = 'filter-container';
+filterContainer.innerHTML = `
+    <div class="price-filter">
+        <label>Цена от:</label>
+        <input type="number" id="min-price" placeholder="Мин" oninput="filterByPrice()">
+        <label>до:</label>
+        <input type="number" id="max-price" placeholder="Макс" oninput="filterByPrice()">
+    </div>
+    <div class="sort-buttons">
+        <button onclick="sortProducts('asc')">Цена ↑</button>
+        <button onclick="sortProducts('desc')">Цена ↓</button>
+    </div>
+`;
+document.querySelector('.search-and-filter').appendChild(filterContainer);
+
+// Фильтрация по цене
+function filterByPrice() {
+    const minPrice = parseInt(document.getElementById('min-price').value) || 0;
+    const maxPrice = parseInt(document.getElementById('max-price').value) || Infinity;
+    
+    const filteredProducts = products.filter(product => {
+        const price = parseInt(product.price.replace(/\D/g, ''));
+        return price >= minPrice && price <= maxPrice;
+    });
+    renderProducts(filteredProducts);
+}
+
+// Сортировка по цене
+function sortProducts(order) {
+    const sortedProducts = [...displayedProducts].sort((a, b) => {
+        const priceA = parseInt(a.price.replace(/\D/g, ''));
+        const priceB = parseInt(b.price.replace(/\D/g, ''));
+        return order === 'asc' ? priceA - priceB : priceB - priceA;
+    });
+    renderProducts(sortedProducts);
+}
+
+// Рендеринг товаров
+function renderProducts(productsToRender = displayedProducts) {
+    displayedProducts = productsToRender;
+    productContainer.innerHTML = productsToRender.map((product, index) =>
+        `<div class="product">
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>Цена: ${product.price}</p>
+            <button onclick="showDetails(${index})">Подробнее</button>
+        </div>`
+    ).join('');
+}
+
+// Инициализация
+window.onload = () => {
+    renderProducts(products);
+};
+
