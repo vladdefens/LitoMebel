@@ -511,6 +511,7 @@ function renderProducts(productsToRender = displayedProducts) {
             <h3>${product.name}</h3>
             <p>Цена: ${product.price}</p>
             <button onclick="showDetails(${index})">Подробнее</button>
+            <button onclick="orderProduct(${index})">Заказать через Telegram</button>
         </div>`
     ).join('');
 }
@@ -519,7 +520,15 @@ function renderProducts(productsToRender = displayedProducts) {
 function showDetails(index) {
     const product = displayedProducts[index]; // Используем индекс текущего отображаемого массива
 
-    modal.innerHTML = `...`; // Содержимое модального окна остается прежним
+    modal.innerHTML = `
+        <div>
+            <h2>${product.name}</h2>
+            <img src="${product.image}" alt="${product.name}">
+            <p>Описание: ${product.description}</p>
+            <p>Цена: ${product.price}</p>
+            <button onclick="closeModal()">Закрыть</button>
+        </div>
+    `;
     modal.style.display = 'block';
     overlay.style.display = 'block';
 }
@@ -537,11 +546,11 @@ function filterCategory(category) {
     );
     renderProducts(filteredProducts);
 }
+
 // Функция для получения минимальной и максимальной цены
 function getMinMaxPrice() {
     const prices = products
         .map(p => {
-            // Преобразуем цену в число. Если цена не число (например, "???"), то возвращаем Infinity
             const price = p.price.replace(/\s/g, ''); // Убираем пробелы
             const parsedPrice = parseInt(price.replace(/\D/g, ""), 10); // Преобразуем в число
             return isNaN(parsedPrice) ? Infinity : parsedPrice; // Если не число, то Infinity
@@ -552,6 +561,7 @@ function getMinMaxPrice() {
         max: Math.max(...prices)
     };
 }
+
 // Фильтрация по цене
 function filterByPrice() {
     const minPrice = parseInt(document.getElementById('minPrice').value) || 0;
@@ -559,26 +569,27 @@ function filterByPrice() {
     const filteredProducts = products.filter(product => {
         const price = product.price.replace(/\s/g, ''); // Убираем пробелы
         const parsedPrice = parseInt(price.replace(/\D/g, ""), 10); // Преобразуем в число
-        // Проверяем, является ли цена числом, и фильтруем по диапазону
         return !isNaN(parsedPrice) && parsedPrice >= minPrice && parsedPrice <= maxPrice;
     });
     renderProducts(filteredProducts);
 }
+
 // Сортировка товаров по цене
 function sortByPrice(ascending) {
     const sortedProducts = [...displayedProducts].sort((a, b) => {
         const priceA = parseInt(a.price.replace(/\s/g, '').replace(/\D/g, ''), 10);
         const priceB = parseInt(b.price.replace(/\s/g, '').replace(/\D/g, ''), 10);
-        if (isNaN(priceA) || isNaN(priceB)) return 0; // Если цена не определена, не сортируем
+        if (isNaN(priceA) || isNaN(priceB)) return 0;
         return ascending ? priceA - priceB : priceB - priceA;
     });
     renderProducts(sortedProducts);
+}
 
 // Обработчики кликов по кнопкам категорий
 document.querySelectorAll('.categories button').forEach(button => {
     button.addEventListener('click', () => {
         const category = button.textContent.replace(/\(\d+\)/, '').trim();
-        filterCategory(category === 'Все' ? '' : category); // Фильтруем по категории
+        filterCategory(category === 'Все' ? '' : category);
     });
 });
 
@@ -590,7 +601,6 @@ function searchProducts() {
     );
     renderProducts(filteredProducts);
 }
-
 
 // Добавляем фильтр по цене в HTML
 const priceFilterContainer = document.createElement('div');
@@ -604,92 +614,17 @@ priceFilterContainer.innerHTML = `
 `;
 document.querySelector('.search-and-filter').appendChild(priceFilterContainer);
 
-// Инициализация при загрузке страницы
-window.onload = () => {
-    renderProducts(products); // Отображаем все товары по умолчанию
-};
-2. Интегрированный код с сохранением всех функций:
-javascript
-Копировать
-Редактировать
-let displayedProducts = [...products]; // Копируем исходный массив товаров
-
-const productContainer = document.getElementById('product-container');
-const modal = document.createElement('div');
-const overlay = document.createElement('div');
-
-modal.className = 'modal';
-overlay.className = 'overlay';
-
-document.body.appendChild(modal);
-document.body.appendChild(overlay);
-
-// Функция для отображения карточек товаров
-function renderProducts(productsToRender = displayedProducts) {
-    displayedProducts = productsToRender; // Сохраняем текущий список
-    productContainer.innerHTML = productsToRender.map((product, index) =>
-        `<div class="product">
-            <img src="${product.image}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>Цена: ${product.price}</p>
-            <button onclick="showDetails(${index})">Подробнее</button>
-        </div>`
-    ).join('');
+// Функция для отправки заказа через Telegram
+function orderProduct(index) {
+    const product = displayedProducts[index];
+    const message = `Хочу заказать ${product.name} за ${product.price}. Пожалуйста, свяжитесь со мной для дальнейших инструкций.`;
+    
+    // Ссылка на Telegram
+    const telegramLink = `https://t.me/YOUR_BOT_USERNAME?start=${encodeURIComponent(message)}`;
+    
+    // Открытие Telegram
+    window.open(telegramLink, '_blank');
 }
-
-// Функция для отображения модального окна
-function showDetails(index) {
-    const product = displayedProducts[index]; // Используем индекс текущего отображаемого массива
-
-    modal.innerHTML = `...`; // Содержимое модального окна остается прежним
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
-}
-
-// Функция для закрытия модального окна
-function closeModal() {
-    modal.style.display = 'none';
-    overlay.style.display = 'none';
-}
-
-// Фильтрация по категории
-function filterCategory(category) {
-    const filteredProducts = products.filter(product =>
-        (product.category.toLowerCase() === category.toLowerCase()) || category === ''
-    );
-    renderProducts(filteredProducts);
-}
-
-
-// Обработчики кликов по кнопкам категорий
-document.querySelectorAll('.categories button').forEach(button => {
-    button.addEventListener('click', () => {
-        const category = button.textContent.replace(/\(\d+\)/, '').trim();
-        filterCategory(category === 'Все' ? '' : category); // Фильтруем по категории
-    });
-});
-
-// Поиск товаров
-function searchProducts() {
-    const query = document.getElementById('searchInput').value.toLowerCase().trim();
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(query)
-    );
-    renderProducts(filteredProducts);
-}
-
-
-// Добавляем фильтр по цене в HTML
-const priceFilterContainer = document.createElement('div');
-priceFilterContainer.className = 'price-filter';
-const { min, max } = getMinMaxPrice();
-priceFilterContainer.innerHTML = `
-    <label>Цена от: <input type="number" id="minPrice" value="${min}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
-    <label>до: <input type="number" id="maxPrice" value="${max}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
-    <button onclick="sortByPrice(true)">По возрастанию</button>
-    <button onclick="sortByPrice(false)">По убыванию</button>
-`;
-document.querySelector('.search-and-filter').appendChild(priceFilterContainer);
 
 // Инициализация при загрузке страницы
 window.onload = () => {
