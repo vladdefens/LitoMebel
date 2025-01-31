@@ -708,3 +708,47 @@ function searchProducts() {
     );
     renderProducts(filteredProducts);
 }
+
+// Получаем минимальную и максимальную цену из списка товаров
+function getMinMaxPrice() {
+    const prices = products
+        .map(p => parseInt(p.price.replace(/\D/g, "")))
+        .filter(price => !isNaN(price));
+    return {
+        min: Math.min(...prices),
+        max: Math.max(...prices)
+    };
+}
+
+// Добавляем фильтр по цене в HTML
+const priceFilterContainer = document.createElement('div');
+priceFilterContainer.className = 'price-filter';
+const { min, max } = getMinMaxPrice();
+priceFilterContainer.innerHTML = `
+    <label>Цена от: <input type="number" id="minPrice" value="${min}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
+    <label>до: <input type="number" id="maxPrice" value="${max}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
+    <button onclick="sortByPrice(true)">По возрастанию</button>
+    <button onclick="sortByPrice(false)">По убыванию</button>
+`;
+document.querySelector('.search-and-filter').appendChild(priceFilterContainer);
+
+// Фильтрация по цене
+function filterByPrice() {
+    const minPrice = parseInt(document.getElementById('minPrice').value) || min;
+    const maxPrice = parseInt(document.getElementById('maxPrice').value) || max;
+    const filteredProducts = products.filter(product => {
+        const price = parseInt(product.price.replace(/\D/g, ""));
+        return price >= minPrice && price <= maxPrice;
+    });
+    renderProducts(filteredProducts);
+}
+
+// Сортировка товаров по цене
+function sortByPrice(ascending) {
+    const sortedProducts = [...displayedProducts].sort((a, b) => {
+        const priceA = parseInt(a.price.replace(/\D/g, ""));
+        const priceB = parseInt(b.price.replace(/\D/g, ""));
+        return ascending ? priceA - priceB : priceB - priceA;
+    });
+    renderProducts(sortedProducts);
+}
