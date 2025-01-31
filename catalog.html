@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link rel="stylesheet" href="catalog.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=10, user-scalable=yes">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
     <title>Мебельный магазин</title>
-    <link rel="stylesheet" href="catalog.css">
 </head>
 <body>
     
@@ -21,21 +21,24 @@
     </header>
     <main>
         <div class="search-and-filter">
-            <input id="searchInput" type="text" placeholder="Поиск товаров...">
+            <input id="searchInput" type="text" placeholder="Поиск товаров..." oninput="searchProducts()">
             <div class="categories">
-                <button id="Все">Все</button>
-                <button id="Диван">Диваны</button>
-                <button id="Угол">Углы</button>
-                <button id="Кресло">Кресла</button>
-                <button id="Кухонный угол">Кухонные углы</button>
-                <button id="Комплект">Комплекты</button>
+                <button id="Все" onclick="filterCategory('')">Все</button>
+                <button id="Диван" onclick="filterCategory('Диван')">Диваны</button>
+                <button id="Угол" onclick="filterCategory('Угол')">Углы</button>
+                <button id="Кресло" onclick="filterCategory('Кресло')">Кресла</button>
+                <button id="Кухонный угол" onclick="filterCategory('Кухонный угол')">Кухонные углы</button>
+                <button id="Комплект" onclick="filterCategory('Комплект')"> Комплекты</button>
             </div>
         </div>
         <div class="products" id="product-container"></div>
+        
     </main>
     <footer>
         <p>&copy; 2025 ИП Литовкина М.В. ИНН:930200132583 +79493420947 - Марина</p>
     </footer>
     <script src="catalog.js" defer></script>
 </body>
+</html>
+
 </html>
