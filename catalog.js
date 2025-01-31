@@ -701,8 +701,10 @@ maxPriceInput.addEventListener('input', applyFilters);
 // Инициализация при загрузке страницы
 window.onload = () => {
     updateCategoryButtons(); // Обновляем текст кнопок с количеством товаров
-    renderProducts(products); // Отображаем все товары по умолчанию
+    filterCategory(''); // По умолчанию выбираем категорию "Все"
+    renderProducts(displayedProducts); // Отображаем товары
 };
+
 
 // Поиск товаров
 function searchProducts() {
