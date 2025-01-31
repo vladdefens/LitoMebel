@@ -491,11 +491,9 @@ const products = [
 ];
 
 let displayedProducts = [...products]; // Копируем исходный массив товаров
-let selectedCategory = "";
 
 const productContainer = document.getElementById('product-container');
-const minPriceInput = document.getElementById('min-price');
-const maxPriceInput = document.getElementById('max-price');
+
 const modal = document.createElement('div');
 const overlay = document.createElement('div');
 
@@ -711,57 +709,4 @@ function searchProducts() {
     );
     renderProducts(filteredProducts);
 }
-// Получаем минимальную и максимальную цену из списка товаров
-function getMinMaxPrice() {
-    const prices = products.map(p => p.price);
-    return { min: Math.min(...prices), max: Math.max(...prices) };
-}
-
-// Добавляем фильтр по цене в HTML
-const priceFilterContainer = document.createElement('div');
-priceFilterContainer.className = 'price-filter';
-const { min, max } = getMinMaxPrice();
-priceFilterContainer.innerHTML = `
-    <label>Цена от: <input type="number" id="minPrice" value="${min}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
-    <label>до: <input type="number" id="maxPrice" value="${max}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
-    <button onclick="sortByPrice(true)">По возрастанию</button>
-    <button onclick="sortByPrice(false)">По убыванию</button>
-`;
-document.querySelector('.search-and-filter').appendChild(priceFilterContainer);
-
-// Фильтрация по цене
-function filterByPrice() {
-    const minPrice = parseInt(document.getElementById('minPrice').value) || min;
-    const maxPrice = parseInt(document.getElementById('maxPrice').value) || max;
-    const filteredProducts = products.filter(product => {
-        const price = parseInt(product.price.replace(/\D/g, ""));
-        return price >= minPrice && price <= maxPrice;
-    });
-    renderProducts(filteredProducts);
-}
-
-// Сортировка товаров по цене
-function sortByPrice(ascending) {
-    const sortedProducts = [...displayedProducts].sort((a, b) => {
-        const priceA = parseInt(a.price.replace(/\D/g, ""));
-        const priceB = parseInt(b.price.replace(/\D/g, ""));
-        return ascending ? priceA - priceB : priceB - priceA;
-    });
-    renderProducts(sortedProducts);
-}
-function applyFilters() {
-    const minPrice = parseInt(minPriceInput.value) || getMinMaxPrice().min;
-    const maxPrice = parseInt(maxPriceInput.value) || getMinMaxPrice().max;
-
-    const filteredProducts = products.filter(product => 
-        (selectedCategory === "" || product.category === selectedCategory) &&
-        product.price >= minPrice && product.price <= maxPrice
-    );
-    renderProducts(filteredProducts);
-}
-const { min, max } = getMinMaxPrice();
-minPriceInput.value = min;
-maxPriceInput.value = max;
-
-renderProducts(products);
 
