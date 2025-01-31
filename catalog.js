@@ -491,7 +491,6 @@ const products = [
 ];
 
 let displayedProducts = [...products]; // Копируем исходный массив товаров
-let currentCategory = '';
 
 const productContainer = document.getElementById('product-container');
 const modal = document.createElement('div');
@@ -505,7 +504,7 @@ document.body.appendChild(overlay);
 
 // Функция для отображения карточек товаров
 function renderProducts(productsToRender = displayedProducts) {
-    displayedProducts = productsToRender;
+    displayedProducts = productsToRender; // Сохраняем текущий список
     productContainer.innerHTML = productsToRender.map((product, index) =>
         `<div class="product">
             <img src="${product.image}" alt="${product.name}">
@@ -514,40 +513,6 @@ function renderProducts(productsToRender = displayedProducts) {
             <button onclick="showDetails(${index})">Подробнее</button>
         </div>`
     ).join('');
-}
-
-// Обновленный обработчик кликов по категориям
-function setupCategoryButtons() {
-    document.querySelectorAll('.categories button').forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.textContent.replace(/\(\d+\)/, '').trim();
-            filterProducts(category === 'Все' ? '' : category);
-        });
-    });
-}
-
-// Обработчик изменения цен
-function setupPriceFilters() {
-    document.getElementById('minPrice').addEventListener('change', () => filterProducts(currentCategory));
-    document.getElementById('maxPrice').addEventListener('change', () => filterProducts(currentCategory));
-}
-
-
-
-// Функция для фильтрации товаров по категории и цене
-function filterProducts(category) {
-    currentCategory = category;
-    const minPrice = parseInt(document.getElementById('minPrice').value) || min;
-    const maxPrice = parseInt(document.getElementById('maxPrice').value) || max;
-    
-    const filteredProducts = products.filter(product => {
-        const price = parseInt(product.price.replace(/\D/g, ""));
-        const matchesCategory = category === '' || product.category.toLowerCase() === category.toLowerCase();
-        const matchesPrice = price >= minPrice && price <= maxPrice;
-        return matchesCategory && matchesPrice;
-    });
-    
-    renderProducts(filteredProducts);
 }
 
 // Функция для отображения модального окна
@@ -694,10 +659,18 @@ function sendOrder(index) {
     }
 }
 
+// Фильтрация по категории
+function filterCategory(category) {
+    const filteredProducts = products.filter(product =>
+        (product.category.toLowerCase() === category.toLowerCase()) || category === ''
+    );
+    renderProducts(filteredProducts);
+}
+
 // Функция для подсчета товаров в каждой категории
 function getProductCount(category) {
     if (category === '') {
-        return products.length;
+        return products.length; // Все товары
     }
     return products.filter(product => product.category.toLowerCase() === category.toLowerCase()).length;
 }
@@ -706,12 +679,11 @@ function getProductCount(category) {
 function updateCategoryButtons() {
     const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект'];
     categories.forEach(category => {
-        const button = document.getElementById(category);
-        const count = getProductCount(category === 'Все' ? '' : category);
-        button.textContent = `${category} (${count})`;
+        const button = document.getElementById(category); 
+        const count = getProductCount(category === 'Все' ? '' : category); // Получаем количество товаров в категории
+        button.textContent = `${category} (${count})`; // Обновляем текст кнопки
     });
 }
-
 
 // Обработчики кликов по кнопкам
 document.querySelectorAll('.categories button').forEach(button => {
@@ -722,12 +694,10 @@ document.querySelectorAll('.categories button').forEach(button => {
     });
 });
 
-// Инициализация фильтров при загрузке страницы
+// Инициализация при загрузке страницы
 window.onload = () => {
-    setupCategoryButtons();
-    setupPriceFilters();
-    updateCategoryButtons();
-    renderProducts(products);
+    updateCategoryButtons(); // Обновляем текст кнопок с количеством товаров
+    renderProducts(products); // Отображаем все товары по умолчанию
 };
 
 // Поиск товаров
@@ -739,3 +709,46 @@ function searchProducts() {
     renderProducts(filteredProducts);
 }
 
+// Получаем минимальную и максимальную цену из списка товаров
+function getMinMaxPrice() {
+    const prices = products
+        .map(p => parseInt(p.price.replace(/\D/g, "")))
+        .filter(price => !isNaN(price));
+    return {
+        min: Math.min(...prices),
+        max: Math.max(...prices)
+    };
+}
+
+// Добавляем фильтр по цене в HTML
+const priceFilterContainer = document.createElement('div');
+priceFilterContainer.className = 'price-filter';
+const { min, max } = getMinMaxPrice();
+priceFilterContainer.innerHTML = `
+    <label>Цена от: <input type="number" id="minPrice" value="${min}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
+    <label>до: <input type="number" id="maxPrice" value="${max}" min="${min}" max="${max}" onchange="filterByPrice()"></label>
+    <button onclick="sortByPrice(true)">По возрастанию</button>
+    <button onclick="sortByPrice(false)">По убыванию</button>
+`;
+document.querySelector('.search-and-filter').appendChild(priceFilterContainer);
+
+// Фильтрация по цене
+function filterByPrice() {
+    const minPrice = parseInt(document.getElementById('minPrice').value) || min;
+    const maxPrice = parseInt(document.getElementById('maxPrice').value) || max;
+    const filteredProducts = products.filter(product => {
+        const price = parseInt(product.price.replace(/\D/g, ""));
+        return price >= minPrice && price <= maxPrice;
+    });
+    renderProducts(filteredProducts);
+}
+
+// Сортировка товаров по цене
+function sortByPrice(ascending) {
+    const sortedProducts = [...displayedProducts].sort((a, b) => {
+        const priceA = parseInt(a.price.replace(/\D/g, ""));
+        const priceB = parseInt(b.price.replace(/\D/g, ""));
+        return ascending ? priceA - priceB : priceB - priceA;
+    });
+    renderProducts(sortedProducts);
+}
