@@ -493,7 +493,6 @@ const products = [
 let displayedProducts = [...products]; // Копируем исходный массив товаров
 
 const productContainer = document.getElementById('product-container');
-
 const modal = document.createElement('div');
 const overlay = document.createElement('div');
 
@@ -540,7 +539,7 @@ function showDetails(index) {
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <p><strong>Цена:</strong> ${product.price}</p>
-                <p><strong>Телефон для связи:</strong> +79493420947 НА САЙТЕ ВСЕ ТОВАРЫ СО СКИДКОЙ 5% ПРИ ЗАКАЗЕ ЧЕРЕЗ НОМЕР ТЕЛЕФОНА НУЖНО СООБЩИТЬ ЧТО ВЫ ЗВОНИТЕ С САЙТА ЧТОБЫ ПОЛУЧИТЬ СКИДКУ</p>
+                <p><strong>Телефон для связи:</strong> +79493420947</p>
                 <p>Или заполните форму:</p>
                 <form id="orderForm">
                     <label for="name">Ваше имя:</label>
@@ -695,16 +694,11 @@ document.querySelectorAll('.categories button').forEach(button => {
     });
 });
 
-minPriceInput.addEventListener('input', applyFilters);
-maxPriceInput.addEventListener('input', applyFilters);
-
 // Инициализация при загрузке страницы
 window.onload = () => {
     updateCategoryButtons(); // Обновляем текст кнопок с количеством товаров
-    filterCategory(''); // По умолчанию выбираем категорию "Все"
-    renderProducts(displayedProducts); // Отображаем товары
+    renderProducts(products); // Отображаем все товары по умолчанию
 };
-
 
 // Поиск товаров
 function searchProducts() {
@@ -714,4 +708,3 @@ function searchProducts() {
     );
     renderProducts(filteredProducts);
 }
-
