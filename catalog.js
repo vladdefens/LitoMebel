@@ -8,7 +8,39 @@ const products = [
         category: "Угол"
     },
     { 
-        name: "Кровать Классик", 
+        name: "Кровать детская - Мечта", 
+        price: "42 500 руб.", 
+        image: "https://i.postimg.cc/tJ5n8DqC/image.jpg", 
+        description: "Основание кровати – ламели | Подлокотники ЛДСП + пена | Спинка ЛДСП + пена | Все крепления на болтах | Габариты: 220×100 см | Спальное место: 200×90 см | Высота подлокотников: 70 см (низкая часть) | Высота спинки: 120 см | Толщина подлокотников: 10 см",
+        gallery: ["https://i.postimg.cc/tJ5n8DqC/image.jpg", "https://i.postimg.cc/PfzDLfWs/1.jpg", "https://i.postimg.cc/pXsnZ0cs/2.jpg"],
+        category: "Кровать"
+    },
+    { 
+        name: "Кровать Сицилия (Короб ЛДСП)", 
+        price: "40 000 руб.", 
+        image: "https://i.postimg.cc/DypK5srr/image.jpg", 
+        description: "Габариты: 220×168 см | Спальное место: 200×160 см | Короб ЛДСП + файбертекс | Подъемный механизм на газлифтах | Металлическое основание Виафератта ❗️ | Большой короб для белья | На изголовье стразы | Ткань Мадрид (1 категория)",
+        gallery: ["https://i.postimg.cc/DypK5srr/image.jpg", "https://i.postimg.cc/nhsfWz26/1.jpg", "https://i.postimg.cc/FH2XX4n1/2.jpg"],
+        category: "Кровать"
+    },
+    { 
+        name: "Кровать Сицилия (Короб ДСП)", 
+        price: "36 500 руб.", 
+        image: "https://i.postimg.cc/DypK5srr/image.jpg", 
+        description: "Габариты: 220×168 см | Спальное место: 200×160 см | Короб ЛДСП + файбертекс | Подъемный механизм на газлифтах | Металлическое основание Виафератта ❗️ | Большой короб для белья | На изголовье стразы | Ткань Мадрид (1 категория)",
+        gallery: ["https://i.postimg.cc/DypK5srr/image.jpg", "https://i.postimg.cc/nhsfWz26/1.jpg", "https://i.postimg.cc/FH2XX4n1/2.jpg"],
+        category: "Кровать"
+    },
+    { 
+        name: "Кровать Классик (Короб ДСП)", 
+        price: "38 500 руб.", 
+        image: "https://i.postimg.cc/htV7VSxq/image.jpg", 
+        description: "Габариты: 220×168 см | Спальное место: 200×160 см | Короб ДСП с подъемным механизмом на газлифтах | Большой короб для белья | Ткань Мадрид (1 категория)",
+        gallery: ["https://i.postimg.cc/htV7VSxq/image.jpg", "https://i.postimg.cc/1zHnYJJC/1.jpg", "https://i.postimg.cc/j5SwVP1s/2.jpg"],
+        category: "Кровать"
+    },
+    { 
+        name: "Кровать Классик (Короб ЛДСП)", 
         price: "41 000 руб.", 
         image: "https://i.postimg.cc/htV7VSxq/image.jpg", 
         description: "Габариты: 220×168 см | Спальное место: 200×160 см | Короб ЛДСП с подъемным механизмом на газлифтах | Большой короб для белья | Ткань Мадрид (1 категория)",
