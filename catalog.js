@@ -709,7 +709,7 @@ function getProductCount(category) {
 }
 
 function updateCategoryButtons() {
-    const categories = ['Все', 'Диваны', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект', 'Кровать'];
+    const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект', 'Кровать'];
     categories.forEach(category => {
         const button = document.getElementById(category);
         const count = getProductCount(category === 'Все' ? '' : category);
