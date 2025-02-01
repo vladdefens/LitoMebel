@@ -491,6 +491,10 @@ const products = [
 ];
 
 let displayedProducts = [...products]; // Копируем исходный массив товаров
+let currentCategory = ''; // пустая строка означает "Все"
+let currentMinPrice = null;
+let currentMaxPrice = null;
+let currentSortOrder = ''; // 'asc' или 'desc'
 
 const productContainer = document.getElementById('product-container');
 const modal = document.createElement('div');
@@ -501,6 +505,12 @@ overlay.className = 'overlay';
 
 document.body.appendChild(modal);
 document.body.appendChild(overlay);
+
+// Функция для парсинга цены
+function parsePrice(priceStr) {
+    const numStr = priceStr.replace(/[^\d]/g, '');
+    return numStr ? parseInt(numStr) : null;
+}
 
 // Функция для отображения карточек товаров
 function renderProducts(productsToRender = displayedProducts) {
@@ -517,8 +527,7 @@ function renderProducts(productsToRender = displayedProducts) {
 
 // Функция для отображения модального окна
 function showDetails(index) {
-    const product = displayedProducts[index]; // Используем индекс текущего отображаемого массива
-
+    const product = displayedProducts[index];
     modal.innerHTML = `
         <button class="close" onclick="closeModal()">&times;</button>
         <div class="modal-content">
@@ -539,7 +548,7 @@ function showDetails(index) {
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <p><strong>Цена:</strong> ${product.price}</p>
-                <p><strong>Телефон для связи:</strong> +79493420947 НА САЙТЕ ВСЕ ТОВАРЫ СО СКИДКОЙ 5% ПРИ ЗАКАЗЕ ЧЕРЕЗ НОМЕР ТЕЛЕФОНА НУЖНО СООБЩИТЬ ЧТО ВЫ ЗВОНИТЕ С САЙТА ЧТОБЫ ПОЛУЧИТЬ СКИДКУ</p>
+                <p><strong>Телефон для связи:</strong> +79493420947 ...</p>
                 <p>Или заполните форму:</p>
                 <form id="orderForm">
                     <label for="name">Ваше имя:</label>
@@ -566,7 +575,6 @@ function updateMainImage(itemSrc) {
     }
 }
 
-// Функция для закрытия модального окна
 function closeModal() {
     modal.style.display = 'none';
     overlay.style.display = 'none';
@@ -577,7 +585,7 @@ function sendOrder(index) {
     const name = document.getElementById('name').value;
     const phone = document.getElementById('phone').value;
     const time = document.getElementById('time').value;
-    const product = displayedProducts[index]; // Используем индекс текущего списка
+    const product = displayedProducts[index];
 
     if (!name || !phone || !time) {
         alert('Пожалуйста, заполните все поля.');
@@ -589,124 +597,175 @@ function sendOrder(index) {
 - Описание: ${product.description}
 - Имя: ${name}
 - Телефон: ${phone}
-- Удобное время для звонка: ${time}`;
+- Удобное время: ${time}`;
 
-    const token = '7973176685:AAF_sOnSxyS4LRy2qOZ7pdwI9OTZkQreBSI'; // Токен бота
-    const chatId = '974907531'; // Ваш chatId
+    const token = '7973176685:AAF_sOnSxyS4LRy2qOZ7pdwI9OTZkQreBSI';
+    const chatId = '974907531';
     const url = `https://api.telegram.org/bot${token}/sendPhoto`;
-
-    // Если это URL, то отправляем его напрямую
     let imageToSend = product.image;
+
     if (imageToSend.startsWith('http')) {
-        // Если это URL, передаем его напрямую
         sendMessageWithImageURL(imageToSend);
     } else {
-        // Если это локальный файл, пытаемся отправить как файл
         sendMessageWithImageFile(imageToSend);
     }
 
     function sendMessageWithImageURL(imageURL) {
         const formData = new FormData();
         formData.append('chat_id', chatId);
-        formData.append('caption', message); // Добавляем текстовое сообщение
-        formData.append('photo', imageURL); // Добавляем фото по URL
+        formData.append('caption', message);
+        formData.append('photo', imageURL);
 
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Telegram API Response:', data); // Логируем ответ от API
-            if (data.ok) {
-                alert('Ваш заказ отправлен!');
-                closeModal();
-            } else {
-                alert(`Ошибка при отправке заказа: ${data.description}`);
-            }
-        })
-        .catch(error => {
-            alert('Произошла ошибка: ' + error.message);
-        });
+        fetch(url, { method: 'POST', body: formData })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Telegram API Response:', data);
+                if (data.ok) {
+                    alert('Ваш заказ отправлен!');
+                    closeModal();
+                } else {
+                    alert(`Ошибка: ${data.description}`);
+                }
+            })
+            .catch(error => alert('Ошибка: ' + error.message));
     }
 
     function sendMessageWithImageFile(imagePath) {
         const formData = new FormData();
         formData.append('chat_id', chatId);
         formData.append('caption', message);
+        const imageUrl = "https://yourserver.com/" + imagePath;
+        formData.append('photo', imageUrl);
 
-        // Здесь предполагается, что изображение доступно через URL
-        const imageUrl = "https://yourserver.com/" + imagePath; // Замените на реальный путь
-        formData.append('photo', imageUrl); // Отправляем фото через URL
-
-        fetch(url, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Telegram API Response:', data); // Логируем ответ от API
-            if (data.ok) {
-                alert('Ваш заказ отправлен!');
-                closeModal();
-            } else {
-                alert(`Ошибка при отправке заказа: ${data.description}`);
-            }
-        })
-        .catch(error => {
-            alert('Произошла ошибка: ' + error.message);
-        });
+        fetch(url, { method: 'POST', body: formData })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Telegram API Response:', data);
+                if (data.ok) {
+                    alert('Ваш заказ отправлен!');
+                    closeModal();
+                } else {
+                    alert(`Ошибка: ${data.description}`);
+                }
+            })
+            .catch(error => alert('Ошибка: ' + error.message));
     }
 }
 
-// Фильтрация по категории
+// ---------------- ФИЛЬТР И СОРТИРОВКА ----------------
+
+// Обновление placeholder-ов цен для выбранной категории
+function updatePricePlaceholders() {
+    const categoryProducts = products.filter(product => {
+        return currentCategory === '' ||
+               product.category.toLowerCase() === currentCategory.toLowerCase();
+    }).filter(product => parsePrice(product.price) !== null);
+
+    if (categoryProducts.length > 0) {
+        const prices = categoryProducts.map(product => parsePrice(product.price));
+        const min = Math.min(...prices);
+        const max = Math.max(...prices);
+        document.getElementById('minPrice').placeholder = `От ${min}`;
+        document.getElementById('maxPrice').placeholder = `До ${max}`;
+    } else {
+        document.getElementById('minPrice').placeholder = "От";
+        document.getElementById('maxPrice').placeholder = "До";
+    }
+}
+
+// Применение фильтров и сортировки
+function applyFiltersAndSort() {
+    let filtered = products.filter(product => {
+        if (currentCategory && product.category.toLowerCase() !== currentCategory.toLowerCase()) {
+            return false;
+        }
+        const price = parsePrice(product.price);
+        if (price === null) return false;
+        if (currentMinPrice !== null && price < currentMinPrice) return false;
+        if (currentMaxPrice !== null && price > currentMaxPrice) return false;
+        return true;
+    });
+
+    if (currentSortOrder === 'asc') {
+        filtered.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    } else if (currentSortOrder === 'desc') {
+        filtered.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    }
+
+    renderProducts(filtered);
+}
+
+// Изменение категории
 function filterCategory(category) {
-    const filteredProducts = products.filter(product =>
-        (product.category.toLowerCase() === category.toLowerCase()) || category === ''
-    );
-    renderProducts(filteredProducts);
+    currentCategory = category;
+    updatePricePlaceholders();
+    applyFiltersAndSort();
 }
 
-// Функция для подсчета товаров в каждой категории
+// Обновление количества товаров на кнопках категорий
 function getProductCount(category) {
-    if (category === '') {
-        return products.length; // Все товары
-    }
+    if (category === '') return products.length;
     return products.filter(product => product.category.toLowerCase() === category.toLowerCase()).length;
 }
 
-// Функция для обновления текста на кнопках категорий
 function updateCategoryButtons() {
     const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект'];
     categories.forEach(category => {
-        const button = document.getElementById(category); 
-        const count = getProductCount(category === 'Все' ? '' : category); // Получаем количество товаров в категории
-        button.textContent = `${category} (${count})`; // Обновляем текст кнопки
+        const button = document.getElementById(category);
+        const count = getProductCount(category === 'Все' ? '' : category);
+        button.textContent = `${category} (${count})`;
     });
 }
 
-// Обработчики кликов по кнопкам
+// ---------------- Обработчики событий ----------------
+
+// Фильтр по цене и сортировка – требуется добавить в HTML следующие элементы, например:
+/*
+<div class="filter">
+  <input type="number" id="minPrice" placeholder="От" />
+  <input type="number" id="maxPrice" placeholder="До" />
+</div>
+<div class="sorting">
+  <button id="sortAsc">Сортировать по возрастанию</button>
+  <button id="sortDesc">Сортировать по убыванию</button>
+</div>
+*/
+
+document.getElementById('minPrice').addEventListener('input', (e) => {
+    const value = parseInt(e.target.value);
+    currentMinPrice = isNaN(value) ? null : value;
+    applyFiltersAndSort();
+});
+
+document.getElementById('maxPrice').addEventListener('input', (e) => {
+    const value = parseInt(e.target.value);
+    currentMaxPrice = isNaN(value) ? null : value;
+    applyFiltersAndSort();
+});
+
+document.getElementById('sortAsc').addEventListener('click', () => {
+    currentSortOrder = 'asc';
+    applyFiltersAndSort();
+});
+
+document.getElementById('sortDesc').addEventListener('click', () => {
+    currentSortOrder = 'desc';
+    applyFiltersAndSort();
+});
+
+// Кнопки категорий
 document.querySelectorAll('.categories button').forEach(button => {
     button.addEventListener('click', () => {
         const category = button.textContent.replace(/\(\d+\)/, '').trim();
-        filterCategory(category === 'Все' ? '' : category); // Фильтруем по категории
-        updateCategoryButtons(); // Обновляем счетчики
+        filterCategory(category === 'Все' ? '' : category);
+        updateCategoryButtons();
     });
 });
 
-// Инициализация при загрузке страницы
+// ---------------- Инициализация ----------------
+
 window.onload = () => {
-    updateCategoryButtons(); // Обновляем текст кнопок с количеством товаров
-    renderProducts(products); // Отображаем все товары по умолчанию
+    updateCategoryButtons();
+    updatePricePlaceholders();
+    renderProducts(products);
 };
-
-// Поиск товаров
-function searchProducts() {
-    const query = document.getElementById('searchInput').value.toLowerCase().trim();
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(query)
-    );
-    renderProducts(filteredProducts);
-}
-
-
