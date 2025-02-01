@@ -499,6 +499,15 @@ let currentSortOrder = ''; // 'asc' или 'desc'
 const productContainer = document.getElementById('product-container');
 const modal = document.createElement('div');
 const overlay = document.createElement('div');
+const categoryMap = {
+  'Диваны': 'Диван',
+  'Углы': 'Угол',
+  'Кресла': 'Кресло',
+  'Кухонные углы': 'Кухонный угол',
+  'Комплекты': 'Комплект',
+  'Кровати': 'Кровать' // если тут совпадает
+};
+
 
 modal.className = 'modal';
 overlay.className = 'overlay';
@@ -696,7 +705,8 @@ function applyFiltersAndSort() {
 }
 
 // Изменение категории
-function filterCategory(category) {
+function filterCategory(categoryButtonName) {
+    const category = categoryMap[categoryButtonName] || '';
     currentCategory = category;
     updatePricePlaceholders();
     applyFiltersAndSort();
