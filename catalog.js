@@ -8,6 +8,14 @@ const products = [
         category: "Угол"
     },
     { 
+        name: "Кровать Классик", 
+        price: "41 000 руб.", 
+        image: "https://i.postimg.cc/htV7VSxq/image.jpg", 
+        description: "Габариты: 220×168 см | Спальное место: 200×160 см | Короб ЛДСП с подъемным механизмом на газлифтах | Большой короб для белья | Ткань Мадрид (1 категория)",
+        gallery: ["https://i.postimg.cc/htV7VSxq/image.jpg", "https://i.postimg.cc/1zHnYJJC/1.jpg", "https://i.postimg.cc/j5SwVP1s/2.jpg"],
+        category: "Кровать"
+    },
+    { 
         name: "Угол Шанель П - образный", 
         price: "91 500 руб.", 
         image: "https://i.postimg.cc/KY3bt17N/image.jpg", 
