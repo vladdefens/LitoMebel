@@ -328,7 +328,8 @@ header nav ul li a {
 
 .categories {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 10px; /* Расстояние между кнопками */
 }
 
 .categories button {
