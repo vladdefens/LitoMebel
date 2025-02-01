@@ -533,3 +533,72 @@ ul {
         gap: 10px;
     }
 }
+
+/* Стили для фильтра */
+.filter {
+  margin: 20px 0;
+}
+.filter input[type="number"] {
+  padding: 8px;
+  font-size: 16px;
+  width: 120px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Стили для сортировки */
+.sorting {
+  margin: 20px 0;
+}
+.sorting button {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+.sorting button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для контейнера с товарами */
+.product {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  transition: box-shadow 0.3s;
+}
+.product:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Стили для модального окна и overlay */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 1001;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  display: none;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: none;
+}
