@@ -499,15 +499,6 @@ let currentSortOrder = ''; // 'asc' или 'desc'
 const productContainer = document.getElementById('product-container');
 const modal = document.createElement('div');
 const overlay = document.createElement('div');
-const categoryMap = {
-  'Диваны': 'Диван',
-  'Углы': 'Угол',
-  'Кресла': 'Кресло',
-  'Кухонные углы': 'Кухонный угол',
-  'Комплекты': 'Комплект',
-  'Кровати': 'Кровать' // если тут совпадает
-};
-
 
 modal.className = 'modal';
 overlay.className = 'overlay';
@@ -705,8 +696,7 @@ function applyFiltersAndSort() {
 }
 
 // Изменение категории
-function filterCategory(categoryButtonName) {
-    const category = categoryMap[categoryButtonName] || '';
+function filterCategory(category) {
     currentCategory = category;
     updatePricePlaceholders();
     applyFiltersAndSort();
@@ -719,7 +709,7 @@ function getProductCount(category) {
 }
 
 function updateCategoryButtons() {
-    const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект', 'Кровать'];
+    const categories = ['Все', 'Диван', 'Угол', 'Кресло', 'Кухонный угол', 'Комплект'];
     categories.forEach(category => {
         const button = document.getElementById(category);
         const count = getProductCount(category === 'Все' ? '' : category);
