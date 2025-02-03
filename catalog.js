@@ -8,6 +8,24 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Диван Жардин", 
+        price: "36 500 руб.", 
+        image: "https://i.postimg.cc/Mpmn4Bh9/image.jpg", 
+        description: "Габариты 225/100 см, сп. м. 200/145 см, комфортное наполнение, большой короб для белья, изготовлен под заказ, ткань Сканди - 1 категория.",
+        gallery: ["https://i.postimg.cc/Mpmn4Bh9/image.jpg", "https://i.postimg.cc/q7BNdRr4/1.jpg", "https://i.postimg.cc/GpMH3C3Y/2.jpg", 
+                 "https://i.postimg.cc/1tf4fj4d/3.jpg", "https://i.postimg.cc/LXw5f318/4.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Делфи", 
+        price: "31 000 руб.", 
+        image: "https://i.postimg.cc/x8pksVhn/image.jpg", 
+        description: "Габариты 200/105 см, сп. м. 200/145 см, большой бельевой короб, комфортное наполнение, ткань Адели - 1 категория.",
+        gallery: ["https://i.postimg.cc/x8pksVhn/image.jpg", "https://i.postimg.cc/05VJ57QF/1.jpg", "https://i.postimg.cc/xTqNXqNC/2.jpg", 
+                 "https://i.postimg.cc/L67YLRjV/3.jpg", "https://i.postimg.cc/2SZqxJwN/4.jpg", "https://i.postimg.cc/Gpn4gQ78/5.jpg"],
+        category: "Диваны"
+    },
+    { 
         name: "Диван Виктория М+", 
         price: "37 000 руб.", 
         image: "https://i.postimg.cc/RFy5GPd2/image.jpg", 
