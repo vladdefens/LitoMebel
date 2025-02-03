@@ -8,6 +8,14 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Диван Алекс", 
+        price: "47 000 руб.", 
+        image: "https://i.postimg.cc/T3F3Bwpy/image.jpg", 
+        description: "Габариты 255/170 см, сп. м. 195/125 см, комфортное наполнение, механизм дельфин, есть короб для белья, в комплекте идет столик, накладки МДФ, ткань Канди - Вип Текстиль - 1 категория, изготовлен под заказ.",
+        gallery: ["https://i.postimg.cc/T3F3Bwpy/image.jpg", "https://i.postimg.cc/9f9Q2h7L/1.jpg", "https://i.postimg.cc/cHN44b70/2.jpg", "https://i.postimg.cc/cHM1KBTY/3.jpg", "https://i.postimg.cc/QC88cKnz/4.jpg"],
+        category: "Диваны"
+    },
+    { 
         name: "Кровать детская - Мечта", 
         price: "42 500 руб.", 
         image: "https://i.postimg.cc/tJ5n8DqC/image.jpg", 
