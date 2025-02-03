@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/  # Закрываем админку
+Disallow: /cart/   # Если корзина не нужна в поиске
+Allow: /
+
+Sitemap: https://litomebeldonetsk.ru/sitemap.xml
