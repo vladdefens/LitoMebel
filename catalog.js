@@ -8,6 +8,40 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Диван Виктория М+", 
+        price: "37 000 руб.", 
+        image: "https://i.postimg.cc/RFy5GPd2/image.jpg", 
+        description: "Габариты 155/110 см, спальное место 195/140 см, ткань Софт (1 категория). Большое спальное место, короба для хранения (индивидуальный заказ - фанерное дно ящика), механизм трансформации - перекидной матрас, комфортное наполнение.",
+        gallery: ["https://i.postimg.cc/RFy5GPd2/image.jpg", "https://i.postimg.cc/7hzvRgQh/1.jpg", "https://i.postimg.cc/02g1wBbw/2.jpg", 
+                  "https://i.postimg.cc/Gmd0MTP3/3.jpg", "https://i.postimg.cc/pLZw3Vkf/4.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Комплект Версаль Диван + 2 кресла", 
+        price: "72 500 руб.", 
+        image: "https://i.postimg.cc/9MS1sKvt/2.jpg", 
+        description: "Габариты дивана 230х110 см, сп. место 195х140 см, габариты кресла 100х100 см, ткань - Корако 💎, 1 категория (под заказ), комфортное наполнение, механизм раскладки дельфин, МДФ накладки, кресло глухое.",
+        gallery: ["https://i.postimg.cc/9MS1sKvt/2.jpg", "https://i.postimg.cc/pVhsKVF0/2-1.jpg", "https://i.postimg.cc/mgRVxQ6q/2-2.jpg", "https://i.postimg.cc/3xB13dsw/2-3.jpg"],
+        category: "Комплекты"
+    },
+    { 
+        name: "Диван Версаль", 
+        price: "36 500 руб.", 
+        image: "https://i.postimg.cc/4xTcqBqk/image.jpg", 
+        description: "Габариты 230х110 см, сп. место 195х140 см, ткань - Сиеста 💎, 1 категория, комфортное наполнение, механизм раскладки дельфин, МДФ накладки.",
+        gallery: ["https://i.postimg.cc/4xTcqBqk/image.jpg", "https://i.postimg.cc/FHgS40Xf/1.jpg", "https://i.postimg.cc/50jQLGYv/2.jpg", 
+                  "https://i.postimg.cc/hvdJ3d0t/3.jpg", "https://i.postimg.cc/mhWcxgdN/4.jpg", "https://i.postimg.cc/WphHS6Qw/5.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Валенсия", 
+        price: "36 000 руб.", 
+        image: "https://i.postimg.cc/NFpnSKGZ/image.jpg", 
+        description: "Ткань Рэми (1 категория), габариты 225/105 см, сп. м. 195/145 см, комфортное наполнение, + короб для белья.",
+        gallery: ["https://i.postimg.cc/NFpnSKGZ/image.jpg", "https://i.postimg.cc/jdSmN4ZT/1.jpg", "https://i.postimg.cc/GhgNjT5y/2.jpg", "https://i.postimg.cc/cLVbpyZ1/3.jpg", "https://i.postimg.cc/ydKrNmkw/4.jpg"],
+        category: "Диваны"
+    },
+    { 
         name: "Диван Апрель", 
         price: "40 000 руб.", 
         image: "https://i.postimg.cc/C5ztyFZ1/image.jpg", 
