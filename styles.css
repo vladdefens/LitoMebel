@@ -359,3 +359,12 @@ ul {
     width: 100%; /* Растягивает изображение на всю ширину экрана */
     height: auto; /* Сохраняет пропорции изображения */
   }
+.warning-message {
+        background-color: red !important; /* Красный фон */
+        color: rgb(0, 0, 0); /* Белый текст */
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+        margin: 10px 0;
+      }
