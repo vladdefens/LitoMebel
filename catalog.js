@@ -9,7 +9,7 @@ const products = [
     },
     { 
         name: "Диван Санди 3", 
-        price: "57 000 руб.", 
+        price: "36 500 руб.", 
         image: "https://i.postimg.cc/KzNYPD3D/3.jpg", 
         description: "Габариты 220/90 см, очень комфортная посадка, модель отлично подходит для кафе, офисов, зала ожидания в банке или парикмахерской, мойки и т. д., ткань - Пегас Блек (ВипТекстиль) - 1 категория.",
         gallery: ["https://i.postimg.cc/KzNYPD3D/3.jpg", "https://i.postimg.cc/gjtk5cDw/31.jpg", "https://i.postimg.cc/Y2d9j8Hp/32.jpg"],
