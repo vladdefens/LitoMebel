@@ -91,7 +91,7 @@ const products = [
     { 
         name: "Диван Мелодия", 
         price: "31 500 руб.", 
-        image: "https://i.postimg.cc/JzMFjYmz/image.jpg", 
+        image: "https://i.postimg.cc/6Q8sj5v4/image.jpg", 
         description: "Габариты 200/75 см, сп. м. 200/140 см, выполнен на фанере + ЛДСП, комфортное наполнение, два ящика для хранения вещей, ткань Мадрид - 1 категория.",
         gallery: ["https://i.postimg.cc/6Q8sj5v4/image.jpg"],
         category: "Диваны"
