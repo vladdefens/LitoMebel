@@ -8,6 +8,14 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Диван Лайм  люкс", 
+        price: "24 000 руб.", 
+        image: "https://i.postimg.cc/3rv8r9W0/image.jpg", 
+        description: "Диван Лайм Люкс, габариты 200х90 см, спальное место 200х145 см, большой короб для белья, комфортное наполнение, утяжки и двойная прострочка на сиденье и подушках, ткань Даллас - 1 категория.",
+        gallery: ["https://i.postimg.cc/3rv8r9W0/image.jpg", "https://i.postimg.cc/bNfzZb2C/1.jpg", "https://i.postimg.cc/YqNtY96p/2.jpg"],
+        category: "Диваны"
+    },
+    { 
         name: "Диван Жардин", 
         price: "36 500 руб.", 
         image: "https://i.postimg.cc/Mpmn4Bh9/image.jpg", 
