@@ -8,6 +8,95 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Диван Санди 3", 
+        price: "57 000 руб.", 
+        image: "https://i.postimg.cc/KzNYPD3D/3.jpg", 
+        description: "Габариты 220/90 см, очень комфортная посадка, модель отлично подходит для кафе, офисов, зала ожидания в банке или парикмахерской, мойки и т. д., ткань - Пегас Блек (ВипТекстиль) - 1 категория.",
+        gallery: ["https://i.postimg.cc/KzNYPD3D/3.jpg", "https://i.postimg.cc/gjtk5cDw/31.jpg", "https://i.postimg.cc/Y2d9j8Hp/32.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Санди 2", 
+        price: "26 500 руб.", 
+        image: "https://i.postimg.cc/BQhK946B/2.jpg", 
+        description: "Габариты 140/90 см, очень комфортное наполнение, идеально подходит для зала ожидания офисов, банков, салонов красоты, ткань - замша Плутон - 1 категория.",
+        gallery: ["https://i.postimg.cc/BQhK946B/2.jpg", "https://i.postimg.cc/QdHWjwKG/21.jpg", "https://i.postimg.cc/jSmn2cyW/22.jpg", "https://i.postimg.cc/R0t6HtTg/23.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Универсал", 
+        price: "40 000 руб.", 
+        image: "https://i.postimg.cc/J7N0mmTB/image.jpg", 
+        description: "Габариты 225х105 см, сп. место 195х150 см, комфортное наполнение, большой короб для белья, большое спальное место, ткань Лама - 1 категория.",
+        gallery: ["https://i.postimg.cc/J7N0mmTB/image.jpg", "https://i.postimg.cc/c4TJghGx/1.jpg", "https://i.postimg.cc/P5x5mDdm/2.jpg", "https://i.postimg.cc/3xcJ9wwz/3.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Токио Люкс", 
+        price: "31 000 руб.", 
+        image: "https://i.postimg.cc/SKnjpM5y/image.jpg", 
+        description: "Габариты 200/90 см, сп. м. 200/145 см, большой бельевой короб, комфортное наполнение, утяжки и двойная прострочка, ткань Формула (Союз М) - 1 категория.",
+        gallery: ["https://i.postimg.cc/SKnjpM5y/image.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Тедди", 
+        price: "64 000 руб.", 
+        image: "https://i.postimg.cc/T3CWxG3c/image.jpg", 
+        description: "Габариты 280х140 см, сп. м. 190х185 см, выполнен на фанере, очень комфортное наполнение, большое спальное место, ткань Лама - 1 категория.",
+        gallery: ["https://i.postimg.cc/T3CWxG3c/image.jpg", "https://i.postimg.cc/QMCKxPBZ/1.jpg", "https://i.postimg.cc/SszXcM7Z/2.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Сити", 
+        price: "50 000 руб.", 
+        image: "https://i.postimg.cc/4Npzrrc8/image.jpg", 
+        description: "Габариты 245/115 см, сп. м. 195/160 см, выполнен на фанере, большой короб для белья, комфортное наполнение, ткань Мадрид - 1 категория.",
+        gallery: ["https://i.postimg.cc/4Npzrrc8/image.jpg", "https://i.postimg.cc/htg9gpbK/1.jpg", "https://i.postimg.cc/SxrcKCDC/2.jpg", "https://i.postimg.cc/TP3g514S/3.jpg",
+                 "https://i.postimg.cc/VNZMq1yN/4.jpg", "https://i.postimg.cc/TwybQSGJ/5.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Поло", 
+        price: "46 500 руб.", 
+        image: "https://i.postimg.cc/13Zf12Hz/image.jpg", 
+        description: "Габариты 245/105 см, сп. м. 195/155 см, комфортное наполнение, пружинный блок, большой короб для белья, ткань Зизи - Эгида (1 категория) - очень мягкая и приятная.",
+        gallery: ["https://i.postimg.cc/13Zf12Hz/image.jpg", "https://i.postimg.cc/kgFDJs1v/1.jpg", "https://i.postimg.cc/9fm0r9s5/2.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Монро", 
+        price: "62 500 руб.", 
+        image: "https://i.postimg.cc/fTVxRGmj/image.jpg", 
+        description: "Габариты 230х110 см, сп. место 140х190 см, комфортное наполнение, механизм - французская раскладушка, ткань Нувола - 1 категория.",
+        gallery: ["https://i.postimg.cc/fTVxRGmj/image.jpg", "https://i.postimg.cc/GmYGkvM4/1.jpg", "https://i.postimg.cc/1zQ6M4TJ/2.jpg", "https://i.postimg.cc/5tSzrbW1/3.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Миллениум", 
+        price: "47 000 руб.", 
+        image: "https://i.postimg.cc/7YhNTG8z/image.jpg", 
+        description: "Механизм раскладки - дельфин, габариты 250×95 см, сп. м. 195×135 см, глубина посадочного места 70 см, ткань Капелла 34 - 1 категория.",
+        gallery: ["https://i.postimg.cc/7YhNTG8z/image.jpg", "https://i.postimg.cc/HsN90Ydh/1.jpg", "https://i.postimg.cc/MpjbdCGK/2.jpg", "https://i.postimg.cc/9f5PSL4P/3.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Меркурий люкс", 
+        price: "46 000 руб.", 
+        image: "https://i.postimg.cc/QNp2nzHm/image.jpg", 
+        description: "Пружинный блок. Габариты 245х115 см, сп. место 196х160 см, ткань Нувола - 1 категория, большой короб для белья, комфортное наполнение, подлокотники с нишами.",
+        gallery: ["https://i.postimg.cc/QNp2nzHm/image.jpg", "https://i.postimg.cc/YqM5cxFH/1.jpg", "https://i.postimg.cc/4x3jyNw2/2.jpg", "https://i.postimg.cc/CKBtCP3j/3.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Мелодия", 
+        price: "31 500 руб.", 
+        image: "https://i.postimg.cc/JzMFjYmz/image.jpg", 
+        description: "Габариты 200/75 см, сп. м. 200/140 см, выполнен на фанере + ЛДСП, комфортное наполнение, два ящика для хранения вещей, ткань Мадрид - 1 категория.",
+        gallery: ["https://i.postimg.cc/6Q8sj5v4/image.jpg"],
+        category: "Диваны"
+    },
+    { 
         name: "Диван Лайм  люкс", 
         price: "24 000 руб.", 
         image: "https://i.postimg.cc/3rv8r9W0/image.jpg", 
@@ -530,6 +619,22 @@ const products = [
         description: "Габариты: 260/170 см, сп. м. 205/160 см, два бельевых короба + ниши в подлокотниках, выполнен на фанере, очень комфортное наполнение, ткань - Невада (Арбен), 1 категория, изготовлен под заказ.",
         gallery: ["https://i.postimg.cc/c40R1p0T/image.jpg", "https://i.postimg.cc/P5FY4NZF/1.jpg", "https://i.postimg.cc/hGkmkw2L/2.jpg"],
         category: "Углы"
+    },
+    { 
+        name: "Диван Фараон 3", 
+        price: "75 700 руб.", 
+        image: "https://i.postimg.cc/1XtjWyXY/3.jpg", 
+        description: "Габариты 180/95 см, механизм трансформации - французская раскладушка с матрасом, сп. м. 195/130 см, выполнен на фанере, комфортное наполнение, ткань Маборо (Эгида, аналог) - 1 категория.",
+        gallery: ["https://i.postimg.cc/1XtjWyXY/3.jpg", "https://i.postimg.cc/05W3zKHg/31.jpg", "https://i.postimg.cc/PrC7YfBC/32.jpg"],
+        category: "Диваны"
+    },
+    { 
+        name: "Диван Фараон 2", 
+        price: "56 200 руб.", 
+        image: "https://i.postimg.cc/pXSg65DQ/2.jpg", 
+        description: "Габариты 180х95 см, без спального места, ткань Сенсей - 1 категория, комфортное наполнение.",
+        gallery: ["https://i.postimg.cc/pXSg65DQ/2.jpg", "https://i.postimg.cc/vZ6pF8zJ/21.jpg", "https://i.postimg.cc/QMGvXLYH/22.jpg"],
+        category: "Диваны"
     },
     { 
         name: "Угол модульный Орион П- образный", 
