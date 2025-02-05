@@ -1,44 +1,44 @@
 const products = [ 
     { 
         name: "Угол Марсель", 
-        price: "??? руб.", 
+        price: "57 000 руб.", 
         image: "https://i.postimg.cc/JzMFjYmz/image.jpg", 
-        description: "Габариты 255/170 см сп. м. 195/125 см комфортное наполнение механизм дельфин есть короб для белья в комплекте идет столик накладки мдф ткань Канди - Вип Текстиль - 3 категория изготовлен под заказ ",
+        description: "Габариты 255/170 см сп. м. 195/125 см комфортное наполнение механизм дельфин есть короб для белья в комплекте идет столик накладки мдф ткань Канди - Вип Текстиль - 1 категория изготовлен под заказ ",
         gallery: ["https://i.postimg.cc/JzMFjYmz/image.jpg", "https://i.postimg.cc/ZqqDM9Wk/1.jpg", "https://i.postimg.cc/hjzZKH8p/2.jpg"],
-        category: "Угол"
+        category: "Углы"
     },
     { 
         name: "Диван Классик", 
-        price: "??? руб.", 
+        price: "55 000 руб.", 
         image: "https://i.postimg.cc/Bv49mQ0H/image.jpg", 
-        description: "габариты: 235 / 120 см сп. м. 195 / 160 см большой короб для белья выполнен на фанере комфортное наполнение ткань Даллас  - 2 категория выполнен под заказ .",
+        description: "габариты: 235 / 120 см сп. м. 195 / 160 см большой короб для белья выполнен на фанере комфортное наполнение ткань Даллас  - 1 категория выполнен под заказ .",
         gallery: ["https://i.postimg.cc/Bv49mQ0H/image.jpg", "https://i.postimg.cc/TP08FMdS/1.jpg", "https://i.postimg.cc/tgQPfwSh/2.jpg"],
-        category: "Диван"
+        category: "Диваны"
     },
     { 
         name: "Кресло Шанель", 
-        price: "??? руб.", 
+        price: "25 000 руб.", 
         image: "https://i.postimg.cc/9fC0yhgN/image.jpg", 
         description: "габариты 100/105 см Комфортное наполнение , короб для хранения вещей выполнен на фанере наладки мдф ткань Мадрид - 1 категория изготовлен под заказ ",
         gallery: ["https://i.postimg.cc/9fC0yhgN/image.jpg", "https://i.postimg.cc/hjGG30BL/1.jpg", "https://i.postimg.cc/GtWhtwsK/2.jpg"],
-        category: "Кресло"
+        category: "Кресла"
     },
     { 
-        name: "Угол Лофт", 
-        price: "??? руб.", 
-        image: "https://i.postimg.cc/ncmh5z6P/image.jpg", 
-        description: "Каркас - фанера 2 короба для белья. Пуф Сундук в комплекте,не только для хранения Ваших вещей, но и может быть продолжением спального места. Габариты 2,50*1, 70 Сп м 2.00*1.70 Высота от пола 45 Ширина угловой спинки 21 Глубина посадки диванной части (без учёта подушек) - 88 Габарит пуфа 90*50",
-        gallery: ["https://i.postimg.cc/ncmh5z6P/image.jpg", "https://i.postimg.cc/B6tqCQTN/1.jpg", "https://i.postimg.cc/7h2wpsQ2/2.jpg", "https://i.postimg.cc/dQkCsJb8/3.jpg"],
-        category: "Угол"
+        name: "Угол Шанель П - образный", 
+        price: "91 500 руб.", 
+        image: "https://i.postimg.cc/KY3bt17N/image.jpg", 
+        description: "Индивидуальный размер: габариты 420/170 см, сп. м. 350/160 см, три короба для белья, ниши в подлокотниках, выполнен на фанере, очень качественное и комфортное наполнение, накладки МДФ, банкетки раскладываются вперед (200/70 см), что позволяет удобно ложиться перед телевизором. Ткань - Капелла (1 категория). Изготовлен под заказ.",
+        gallery: ["https://i.postimg.cc/KY3bt17N/image.jpg", "https://i.postimg.cc/cHqShdXN/1.jpg", "https://i.postimg.cc/bJQjF4BS/2.jpg", "https://i.postimg.cc/prRtNkwG/3.jpg"],
+        category: "Углы"
     },
     { 
         name: "Диван Меркурий М+", 
-        price: "??? руб.", 
+        price: "45 700 руб.", 
         image: "https://i.postimg.cc/2SwbcyWf/image.jpg", 
-        description: "Комфортное наполнение. Индивидуальный заказ - полностью фанерный короб! Ткань Лама 81 2ая категория",
+        description: "Комфортное наполнение. Индивидуальный заказ - полностью фанерный короб! Ткань Лама 81 1ая категория",
         gallery: ["https://i.postimg.cc/2SwbcyWf/image.jpg", "https://i.postimg.cc/xCWcJbwL/1.jpg", "https://i.postimg.cc/pVF9NqjC/2.jpg", 
                   "https://i.postimg.cc/Hs0VnnB7/3.jpg", "https://i.postimg.cc/y8VWZKbp/4.jpg"],
-        category: "Диван"
+        category: "Диваны"
     }
 ];
 
