@@ -24,11 +24,11 @@ const products = [
         category: "Кресла"
     },
     { 
-        name: "Угол Шанель П - образный", 
-        price: "91 500 руб.", 
-        image: "https://i.postimg.cc/KY3bt17N/image.jpg", 
-        description: "Индивидуальный размер: габариты 420/170 см, сп. м. 350/160 см, три короба для белья, ниши в подлокотниках, выполнен на фанере, очень качественное и комфортное наполнение, накладки МДФ, банкетки раскладываются вперед (200/70 см), что позволяет удобно ложиться перед телевизором. Ткань - Капелла (1 категория). Изготовлен под заказ.",
-        gallery: ["https://i.postimg.cc/KY3bt17N/image.jpg", "https://i.postimg.cc/cHqShdXN/1.jpg", "https://i.postimg.cc/bJQjF4BS/2.jpg", "https://i.postimg.cc/prRtNkwG/3.jpg"],
+        name: "Угол Шанель", 
+        price: "57 200 руб.", 
+        image: "https://i.postimg.cc/c40R1p0T/image.jpg", 
+        description: "Габариты: 260/170 см, сп. м. 205/160 см, два бельевых короба + ниши в подлокотниках, выполнен на фанере, очень комфортное наполнение, ткань - Невада (Арбен), 1 категория, изготовлен под заказ.",
+        gallery: ["https://i.postimg.cc/c40R1p0T/image.jpg", "https://i.postimg.cc/P5FY4NZF/1.jpg", "https://i.postimg.cc/hGkmkw2L/2.jpg"],
         category: "Углы"
     },
     { 
