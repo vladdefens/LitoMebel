@@ -8,6 +8,32 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Угол Калифорния", 
+        price: "111 000 руб.", 
+        image: "https://i.postimg.cc/bJb90ztt/image.jpg", 
+        description: "Габариты 350/250 см, сп. м. 300/160 см, комфортное наполнение, пружинный блок, выполнен на фанере, большой короб для белья, ткань Даллас - 1 категория.",
+        gallery: ["https://i.postimg.cc/bJb90ztt/image.jpg", "https://i.postimg.cc/kGmFfkQh/1.jpg", "https://i.postimg.cc/J7NQGzmw/2.jpg",
+                 "https://i.postimg.cc/jdR4NYdD/3.jpg", "https://i.postimg.cc/5NpqSK6n/4.jpg", "https://i.postimg.cc/VkVq3S9t/5.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол Жардин", 
+        price: "44 000 руб.", 
+        image: "https://i.postimg.cc/FR2nmWjj/image.jpg", 
+        description: "Пружинный блок, габариты 225х155 см, сп. место 200х150 см, комфортное наполнение, короб для белья, независимый пружинный блок + ламели, ткань Корако - 1 категория.",
+        gallery: ["https://i.postimg.cc/FR2nmWjj/image.jpg", "https://i.postimg.cc/rsxZp1J7/1.jpg", "https://i.postimg.cc/kMbpwCmw/2.jpg", "https://i.postimg.cc/CLp6Q2M0/3.jpg",
+                 "https://i.postimg.cc/L6k0KVh1/4.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол Рич", 
+        price: "51 000 руб.", 
+        image: "https://i.postimg.cc/L418Vc7V/image.jpg", 
+        description: "Габариты 350/170 см, сп. м. 300/170 см, ткань Формула (Союз М) - 1 категория.",
+        gallery: ["https://i.postimg.cc/L418Vc7V/image.jpg", "https://i.postimg.cc/gkycCvGX/1.jpg", "https://i.postimg.cc/P52XxTpd/2.jpg"],
+        category: "Углы"
+    },
+    { 
         name: "Угол Атлантик", 
         price: "45 000 руб.", 
         image: "https://i.postimg.cc/bJqhP5gK/image.jpg", 
