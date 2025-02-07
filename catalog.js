@@ -8,6 +8,55 @@ const products = [
         category: "Углы"
     },
     { 
+        name: "Угол Атлантик", 
+        price: "45 000 руб.", 
+        image: "https://i.postimg.cc/bJqhP5gK/image.jpg", 
+        description: "Габариты 237х115 см, сп. место 185х150 см, два больших короба для белья, оттоманка на газлифтах, комфортное наполнение, выполнен на фанере, + ниши в подлокотниках, ткань Даллас - 1 категория.",
+        gallery: ["https://i.postimg.cc/bJqhP5gK/image.jpg", "https://i.postimg.cc/4dwTx1Fn/1.jpg", "https://i.postimg.cc/gjJbX6fs/2.jpg", "https://i.postimg.cc/hv5W9tnB/3.jpg",
+                 "https://i.postimg.cc/zXy1qKwX/4.jpg", "https://i.postimg.cc/J4SC00K3/5.jpg", "https://i.postimg.cc/43gCv0Dm/6.jpg", "https://i.postimg.cc/tgtKB5bD/7.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Кресло Эскобар", 
+        price: "30 000 руб.", 
+        image: "https://i.postimg.cc/gjMtfStq/image.jpg", 
+        description: "Габариты 65/70 см, ширина сиденья 52 см, глубина сиденья 57 см, ткань Лама - 1 категория.",
+        gallery: ["https://i.postimg.cc/gjMtfStq/image.jpg", "https://i.postimg.cc/h4MYzv4z/1.jpg", "https://i.postimg.cc/fTLrxskH/2.jpg"],
+        category: "Кресла"
+    },
+    { 
+        name: "Кресло Орион", 
+        price: "31 000 руб.", 
+        image: "https://i.postimg.cc/gcRJG9GT/image.jpg", 
+        description: "Габариты кресла 100/115 см, очень комфортное наполнение, ткань шенил Ниагара (Аметист) - 1 категория.",
+        gallery: ["https://i.postimg.cc/gcRJG9GT/image.jpg"],
+        category: "Кресла"
+    },
+    { 
+        name: "Кресло Меркурий М+", 
+        price: "25 000 руб.", 
+        image: "https://i.postimg.cc/HxFVBddQ/image.jpg", 
+        description: "Габариты кресла 108х65 см, ткань Нувола 💎 - 1 категория.",
+        gallery: ["https://i.postimg.cc/HxFVBddQ/image.jpg"],
+        category: "Кресла"
+    },
+    { 
+        name: "Кресло Марсель", 
+        price: "22 000 руб.", 
+        image: "https://i.postimg.cc/1XSvnx2K/image.jpg", 
+        description: "Габариты кресла 116х90 см, комфортное наполнение, ткань Карди - 1 категория.",
+        gallery: ["https://i.postimg.cc/1XSvnx2K/image.jpg", "https://i.postimg.cc/Pfb3GxvV/1.jpg", "https://i.postimg.cc/tC2BTM5h/2.jpg"],
+        category: "Кресла"
+    },
+    { 
+        name: "Кресло Версаль", 
+        price: "22 000 руб.", 
+        image: "https://i.postimg.cc/MK2S5v2s/image.jpg", 
+        description: "Габариты кресла 100х100 см, ткань Корако 💎 - 1 категория.",
+        gallery: ["https://i.postimg.cc/MK2S5v2s/image.jpg"],
+        category: "Кресла"
+    },
+    { 
         name: "Диван Санди 3", 
         price: "36 500 руб.", 
         image: "https://i.postimg.cc/KzNYPD3D/3.jpg", 
