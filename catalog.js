@@ -1,10 +1,53 @@
 const products = [  
     { 
-        name: "Угол Марсель", 
+        name: "Угол Марсель (столик в комплекте)", 
         price: "57 000 руб.", 
         image: "https://i.postimg.cc/JzMFjYmz/image.jpg", 
         description: "Габариты 255/170 см сп. м. 195/125 см комфортное наполнение механизм дельфин есть короб для белья в комплекте идет столик накладки мдф ткань Канди - Вип Текстиль - 1 категория изготовлен под заказ ",
         gallery: ["https://i.postimg.cc/JzMFjYmz/image.jpg", "https://i.postimg.cc/ZqqDM9Wk/1.jpg", "https://i.postimg.cc/hjzZKH8p/2.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол Челси", 
+        price: "49 000 руб.", 
+        image: "https://i.postimg.cc/0N3dT6s3/image.jpg", 
+        description: "Габарит 240/160 см, сп. м. 200/145 см, механизм - дельфин, большой короб для белья, ткань Капелла (1 категория).",
+        gallery: ["https://i.postimg.cc/0N3dT6s3/image.jpg", "https://i.postimg.cc/4d9bsJ43/1.jpg",
+                 "https://i.postimg.cc/sxCP2t14/2.jpg", "https://i.postimg.cc/FzbykDL5/3.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол Мартиника", 
+        price: "53 000 руб.", 
+        image: "https://i.postimg.cc/rph5SDss/image.jpg", 
+        description: "Габариты 250х185 см, сп. место 205х145 см, комфортное наполнение, короб для белья, большое спальное место, ткань Адели Хейзл - 1 категория.",
+        gallery: ["https://i.postimg.cc/rph5SDss/image.jpg", "https://i.postimg.cc/KzwLHCny/1.jpg", "https://i.postimg.cc/FFk0Ls4F/2.jpg",
+                 "https://i.postimg.cc/6qZRJz04/3.jpg", "https://i.postimg.cc/L6dLBK9t/4.jpg", "https://i.postimg.cc/MpqBN7jX/5.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол кухонный Люкс", 
+        price: "36 000 руб.", 
+        image: "https://i.postimg.cc/T3DjvdtH/image.jpg", 
+        description: "Габариты 224х164 см, сп. место 188х125 см, качественное наполнение, есть короб для кухонных принадлежностей, комфортное спальное место, механизм трансформации - дельфин, выполнен на фанере, ткань Ибица - 1 категория.",
+        gallery: ["https://i.postimg.cc/T3DjvdtH/image.jpg", "https://i.postimg.cc/65DRcsBV/1.jpg", "https://i.postimg.cc/P5YDF6qg/2.jpg",
+                 "https://i.postimg.cc/VNwtyjrd/3.jpg", "https://i.postimg.cc/tgzx9YWD/4.jpg", "https://i.postimg.cc/B6Q1b4C3/5.jpg"],
+        category: "Кухонные углы"
+    },
+    { 
+        name: "Кресло Классик", 
+        price: "32 500 руб.", 
+        image: "https://i.postimg.cc/BvwJ5304/image.jpg", 
+        description: "Габариты кресла 115х125 см, комфортное наполнение, ткань Монолит - 1 категория.",
+        gallery: ["https://i.postimg.cc/BvwJ5304/image.jpg"],
+        category: "Кресла"
+    },
+    { 
+        name: "Угол Классик", 
+        price: "66 000 руб.", 
+        image: "https://i.postimg.cc/cCtyBtcc/image.jpg", 
+        description: "Габариты угла 255х170 см, сп. м. 200х160 см, большой короб для белья, выполнен на фанере, комфортное наполнение, ткань Монолит - 1 категория.",
+        gallery: ["https://i.postimg.cc/cCtyBtcc/image.jpg"],
         category: "Углы"
     },
     { 
@@ -49,6 +92,23 @@ const products = [
         description: "Габариты 65/70 см, ширина сиденья 52 см, глубина сиденья 57 см, ткань Лама - 1 категория.",
         gallery: ["https://i.postimg.cc/gjMtfStq/image.jpg", "https://i.postimg.cc/h4MYzv4z/1.jpg", "https://i.postimg.cc/fTLrxskH/2.jpg"],
         category: "Кресла"
+    },
+    { 
+        name: "Угол Монро", 
+        price: "91 500 руб.", 
+        image: "https://i.postimg.cc/rp5vsLwf/image.jpg", 
+        description: "Ткань - кожзам Лира (Вип Текстиль) - 1 категория.",
+        gallery: ["https://i.postimg.cc/rp5vsLwf/image.jpg"],
+        category: "Углы"
+    },
+    { 
+        name: "Угол Меркурий М+", 
+        price: "55 500 руб.", 
+        image: "https://i.postimg.cc/2jd8JPdF/image.jpg", 
+        description: "Габариты 260х170 см, сп. м. 210/160 см, комфортное наполнение, два короба для белья, выполнены на фанере, ткань Нувола - 1 категория.",
+        gallery: ["https://i.postimg.cc/2jd8JPdF/image.jpg", "https://i.postimg.cc/zXJX100m/1.jpg", "https://i.postimg.cc/jdZqqPFD/2.jpg",
+                 "https://i.postimg.cc/RZhSWhkX/3.jpg"],
+        category: "Углы"
     },
     { 
         name: "Кресло Орион", 
